@@ -5,4 +5,4 @@
 - [Laboratório 01](./lab-01/) - Sistema de Controle de Versão
 
 ## Aulas
-- [Aula 01](Aluno55/POO/aula-01/) - Introdução à linguagem Java
+- [Aula 01](./aula-01/) - Introdução à linguagem Java
