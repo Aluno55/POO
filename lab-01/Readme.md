@@ -20,4 +20,8 @@ Um PAT é um token, uma senha exclusivamente sua que se perder, precisará gerar
 
 - Salvar em cache as credenciais do PAT
 
+Para não repetir o PAT diversas vezes nas mesmas horas usadas, é recomendavel salvar em cache. É possivel salvar por 1 hora usando o comando a seguir:
+```bash
+git config --global credential.helps 'cache --timeout=3600'
+```
 ## Qual a diferença entre git merge e git rebase?
