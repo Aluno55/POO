@@ -4,3 +4,5 @@
 - Laboratório 01 - Sistema de Controle de Versão
 ## Aulas
 - Aula 01 - Introdução à linguagem Java
+
+![Static Badge](https://img.shields.io/badge/MIT%20License-red)
