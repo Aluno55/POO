@@ -5,4 +5,4 @@
 ## Aulas
 - Aula 01 - Introdução à linguagem Java
 
-![Static Badge](https://img.shields.io/badge/MIT%20License-red)
+![GitHub License](https://img.shields.io/github/license/Aluno55/POO)

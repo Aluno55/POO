@@ -25,3 +25,5 @@ Para não repetir o PAT diversas vezes nas mesmas horas usadas, é recomendavel 
 git config --global credential.helps 'cache --timeout=3600'
 ```
 ## Qual a diferença entre git merge e git rebase?
+O git merge vai tentar mesclar 2 branches da mesma tree, se ouver conflito por 2 ou mais pessoas editarem a mesma linha, poderá escolher qual fica.
+Já o git rebase vai reescrever o histórico, reposicionando os commits da sua branch no topo da branch de destino para uma linha de tempo linear
