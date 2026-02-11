@@ -9,6 +9,15 @@ git config −−global user.email "seu−email@exemplo.com"
 
 - Criando Personal Access Token (PAT) no GitHub
 
+Um PAT é um token, uma senha exclusivamente sua que se perder, precisará gerar outra, garantindo um maior nivel de segurança para seus repositorios. Para criar um PAT:
+
+1. Abra sua conta Git e vai em Settings;
+2. Lá no fim da barra lateral derá Developer Settings;
+3. Em Developer Settings, clica em Personal Access Tokens e vai em Tokens (classic);
+4. Vai ter a opção de Generate New Token, escolha Generate New Token (classic).
+5. Selecione os Scopes que deseja usar, o tempo de vida do PAT, se quiser pode colocar uma Note para lembrar para que usará o PAT.
+
+
 - Salvar em cache as credenciais do PAT
 
 ## Qual a diferença entre git merge e git rebase?
