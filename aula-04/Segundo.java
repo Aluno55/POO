@@ -2,18 +2,27 @@
 void main(){
 
     int i = 10;
+    String resultado;
 
     switch (i) {
         case 1:
-            IO.println("um");
+            resultado = "um";
             break;
         case 2:
-            IO.print("dois");
+            resultado = "dois";
             break;
         case 3:
-            IO.print("tres");
+            resultado = "tres";
             break;
         default:
-            IO.println("outro valor");
+            resultado = "outro valor";
     }
+    IO.println(resultado);
+
+    String s = switch(i){
+        case 1 -> "Um";
+        case 2 -> "Dois";
+        case 3 -> "Tres";
+        default -> "Outro";
+    };
 }
