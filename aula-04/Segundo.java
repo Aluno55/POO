@@ -1,14 +1,12 @@
 
 void main(){
 
-    int[] vetor = new int[3];
-    vetor[0] = 1;
-    vetor [1] = 2;
-    vetor [2] = 3;
-    
-    int[][] matriz = new int[2][3];
-    matriz[0][0] = 1;
-    matriz[1][2]= 10;
+    int[][] matriz = {{1,2,3},{4,5,6},{7,8,9}};
+    for (int i = 0; i < matriz.length; i++) {
+        for (int j = 0; j < matriz.length; j++) {
+            IO.println(matriz[i][j]);
+        }
+        }
 
     // int i = 10;
     // String resultado;
