@@ -1,10 +1,16 @@
 // classe é OlaMundo
 // Extension Pack for Java, baixa no VSC
 
+// no terminal:
+// javac <arquivo>
+// java <classe>
+
+
 // int main(char* argv[], int argc){
 // printf("Olá mundo!\n");
 // return 0;
 // }
+
 public class OlaMundo{
   //public permanece
     public static void main(String[] args) {
