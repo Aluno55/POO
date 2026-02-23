@@ -6,3 +6,5 @@
 
 ## Aulas
 - [Aula 01](./aula-01/) - Introdução à linguagem Java
+- [Aula 04](./aula-04/) - Iniciando Java
+<!-- Lembrete: mkdir, cd, git init, git clone, code. -->
