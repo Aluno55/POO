@@ -5,13 +5,12 @@ void main (){
     double[] notas = new double[4];
 
 for (int i = 0; i < notas.length; i++) {
-    String n = IO.readln("Entre com a " + (i+1) + "a. nota: ");
-    notas[i]=Double.parseDouble(n);
+    notas[i] = Double.parseDouble(IO.readln("Entre com a " + (i+1) + "a. nota: "));
     // if (notas[i] > 10 || notas[i] < 0)
     }
 double soma = 0;
 for (double d : notas) {
-    soma = soma + d;
+    soma += d;
     }
-IO.println(Math.round(soma/4));
+IO.println("Média: " + Math.round(soma/4));
 }
