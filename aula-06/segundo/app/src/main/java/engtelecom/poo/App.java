@@ -3,8 +3,13 @@ package engtelecom.poo;
 public class App {
 
     public static void main(String[] args) {
-        String nome = IO.readln("Entre com seu nome: ");
-        IO.println("Bom dia "+ nome);
+        if (args.length != 2){
+            System.out.println("erro");
+        }
+        else {
+            System.out.println("Bom dia " + args[0]);
+            System.out.println(args[1]);
+        }
 
         //Exemplo com strings
 //        String a = "POO", b = "ifsc";
