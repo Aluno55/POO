@@ -1,5 +1,4 @@
-public class atividade {
-    
+public class estações {
     public static void main(String[] args) {
         String day = IO.readln("Entre com o dia: "), month = IO.readln("Entre com o mês: ");
     int dia = Integer.parseInt(day);
@@ -30,4 +29,5 @@ public class atividade {
     else if ((mes == 9 && dia >= 23) || (mes >= 10 && mes <= 11) || (mes == 12 && dia <= 20)) {
         IO.println("primavera");}
     else {IO.println("data inválida");}   
-}}
+    }
+}
