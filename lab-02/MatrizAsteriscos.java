@@ -9,9 +9,14 @@ public class MatrizAsteriscos {
                 s[i][j]=".";
             }
         }
-        for (int i = 0; i < 10; i++) {
+
+        int asteriscos = 0;
+        while (asteriscos < 10) {
             int n1 = r.nextInt(9), n2 = r.nextInt(9);
-            s[n1][n2]="*";
+            if (s[n1][n2].equals(".")){
+                s[n1][n2]="*";
+                ++asteriscos;
+            }
         }
 
         for (int i = 0; i < 9; i++) {
