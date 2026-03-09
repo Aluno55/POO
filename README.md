@@ -15,4 +15,5 @@ git clone https://github.com/Aluno55/POO.git
 code .
 -->
 - [Aula 05](./aula-05/) - Primeiro uso do Intellij
-- [Aula 05](./aula-06/)
+- [Aula 06](./aula-06/) - Argumentos & Começo do Lab-02
+- [Aula 07](./aula-07/) - Continuação do Lab-02

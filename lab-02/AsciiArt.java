@@ -33,7 +33,7 @@ public class AsciiArt {
             int pontos = tam - 2 * space;
             String simbolos = "*".repeat(pontos), espacos = " ".repeat(space);
             System.out.println(espacos + simbolos);
-        }
+        } //boa parte do losango foi feito com ajuda do gpt, desculpe-me
 
     } else {System.out.println("Invalido");}
     } else {System.out.println("Invalido");}

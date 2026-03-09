@@ -11,6 +11,7 @@ public class LeitorArquivo {
             for (int j = 0; j < 9; j++) {
                 matriz[i][j] = linha.charAt(j);
             }
+            //for feito por gpt
             i++;
         }
     }
