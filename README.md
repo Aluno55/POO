@@ -4,7 +4,9 @@
 ## Laboratórios
 - [Laboratório 01](./lab-01/) - Sistema de Controle de Versão
 - [Laboratório 02](./lab-02/) - Lista de Exercicios
-
+<!--Lembre de usar
+gradle init --package=engtelecom.poo
+-->
 ## Aulas
 - [Aula 01](./aula-01/) - Introdução à linguagem Java
 - [Aula 04](./aula-04/) - Iniciando Java
