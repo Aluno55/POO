@@ -11,9 +11,10 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation(libs.guava)
 }
+
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -22,7 +23,7 @@ application {
 }
 
 tasks.run.configure {
-    standardInput = System.`in`
+standardInput = System.`in`
 }
 
 tasks.named<Test>("test") {
