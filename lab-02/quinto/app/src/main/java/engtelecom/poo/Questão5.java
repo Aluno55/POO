@@ -16,7 +16,7 @@ import java.util.Scanner;
                             int vizinho1 = offset1 + i, vizinho2 = offset2 + j;
                             if (vizinho1 >= 0 && vizinho1 < 9 && vizinho2 < 9 && vizinho2 >= 0) {
                                 if (matriz[offset1][offset2] != 9) {
-                                    ++matriz[offset1][offset2]
+                                    ++matriz[offset1][offset2];
                                 }
                             }
                     }
