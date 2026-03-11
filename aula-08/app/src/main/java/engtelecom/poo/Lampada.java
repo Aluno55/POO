@@ -5,12 +5,10 @@ public class Lampada {
     private boolean ligada = false;
 
     // Métodos
-    public void ligar(){
-        ligada = true;
+    public void OffOn(){
+        ligada = !ligada;
     }
-    public void desligar(){
-        ligada = false;
-    }
+
     public boolean IsOnOff(){
         return ligada;
     }
