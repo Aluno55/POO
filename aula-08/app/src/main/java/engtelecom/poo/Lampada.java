@@ -1,7 +1,18 @@
 package engtelecom.poo;
 
 public class Lampada {
+    // Atributos
+    private boolean ligada = false;
 
-    private boolean ligada;
-
+    // Métodos
+    public void ligar(){
+        ligada = true;
+    }
+    public void desligar(){
+        ligada = false;
+    }
+    public boolean IsOnOff(){
+        return ligada;
+    }
+    
 }

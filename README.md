@@ -25,9 +25,11 @@ code .
 <!--
 Abstração do problema: focar nos detalhes relevantes e representar na linguagem da solução
 Paradigma, a forma de como atacar os problemas, cada linguagem segue algum, por exemplo em C não tem objeto, Java não tem ponteiros :D, etc
-Objeto é semelhante a DNA? Dita como é (atributos, caracteristicas), o que faz (metodos) e é identificavel
+
 1- Classe
+Blueprint para fabricar quantos objetos quiser
 2- Objetos
+Objeto é semelhante a DNA? Dita como é (atributos, caracteristicas), o que faz (metodos) e é identificavel
 3- Encapsulamento
 4- Herança
 5- Polimorfismo
