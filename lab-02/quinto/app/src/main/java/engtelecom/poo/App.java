@@ -1,7 +1,7 @@
 package engtelecom.poo;
 
 import java.util.Scanner;
-    public class Questão5{
+    public class App{
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
         int[][] matriz = new int[9][9];
@@ -15,11 +15,25 @@ import java.util.Scanner;
                         for (int offset2 = -1; offset2 < 1; offset2++) {
                             int vizinho1 = offset1 + i, vizinho2 = offset2 + j;
                             if (vizinho1 >= 0 && vizinho1 < 9 && vizinho2 < 9 && vizinho2 >= 0) {
-                                if (matriz[offset1][offset2] != 9) {
+                                // verificar fim e inicio de colunas e linhas
+                                if (i==0){
+                                    
+                                }
+                                else if (i==9){
+
+                                }
+                                else if (j==0){
+
+                                }
+                                else if (j==9){
+
+                                }
+                                else if (matriz[offset1][offset2] != 9) {
                                     ++matriz[offset1][offset2];
                                 }
+                                
                             }
-                    }
+                        }
                     }
                 }
             }

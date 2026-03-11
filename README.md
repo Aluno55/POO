@@ -19,3 +19,4 @@ code .
 - [Aula 05](./aula-05/) - Primeiro uso do Intellij
 - [Aula 06](./aula-06/) - Argumentos & Começo do Lab-02
 - Aula 07 - Continuação do Lab-02 e como ler arquivos (verificar lab-02)
+- Aula 08
