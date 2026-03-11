@@ -10,26 +10,13 @@ import java.util.Scanner;
             String linha = entrada.nextLine();
             for (int i = 0; i<9; i++) {
                 matriz [j][i] = linha.charAt(i) == '.' ? 0 : 9;
-                if (matriz[i][j] == 9){
-                    for (int offset1 = -1; offset1 < 1; offset1++) {
-                        for (int offset2 = -1; offset2 < 1; offset2++) {
+                if (matriz[j][i] == 9){
+                    for (int offset1 = -1; offset1 < 2; offset1++) {
+                        for (int offset2 = -1; offset2 < 2; offset2++) {
                             int vizinho1 = offset1 + i, vizinho2 = offset2 + j;
                             if (vizinho1 >= 0 && vizinho1 < 9 && vizinho2 < 9 && vizinho2 >= 0) {
-                                // verificar fim e inicio de colunas e linhas
-                                if (i==0){
-                                    
-                                }
-                                else if (i==9){
-
-                                }
-                                else if (j==0){
-
-                                }
-                                else if (j==9){
-
-                                }
-                                else if (matriz[offset1][offset2] != 9) {
-                                    ++matriz[offset1][offset2];
+                                if (matriz[offset1][offset2] != 9) {
+                                    ++matriz[vizinho2][vizinho1];
                                 }
                                 
                             }
