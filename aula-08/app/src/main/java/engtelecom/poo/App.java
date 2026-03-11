@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) {
         Lampada a = new Lampada(), b = new Lampada();
         System.out.println(a.IsOnOff());
-        b.OffOn();
+        b.SwitchButton();
         System.out.println(b.IsOnOff());
     }
 }
