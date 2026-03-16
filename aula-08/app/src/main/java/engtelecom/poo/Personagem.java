@@ -21,37 +21,16 @@ public class Personagem {
         speed = spd;
     }
 
-    public int getDexterity() {
-        return dexterity;
-    }
-    public int getEndurance() {
-        return endurance;
-    }
-    public int getHealth() {
-        return health;
-    }
-    public int getInteligence() {
-        return inteligence;
-    }
-    public int getMana() {
-        return mana;
-    }
-    public int getStamina() {
-        return stamina;
-    }
-    public int getStrength() {
-        return strength;
-    }
-    public int getSpeed() {
-        return speed;
-    }
-    public void defense(int dmg) {
-        health -= (dmg-endurance);
-    }
-    public void costSpell(int cost){
-        mana-=cost;
-    }
-    public void costSkill(int cost){
-        stamina-=cost;
-    }
+    public int getDexterity() {return dexterity;}
+    public int getEndurance() {return endurance;}
+    public int getHealth() {return health;}
+    public int getInteligence() {return inteligence;}
+    public int getMana() {return mana;}
+    public int getStamina() {return stamina;}
+    public int getStrength() {return strength;}
+    public int getSpeed() {return speed;}
+    public void defense(int dmg) {health -= (dmg-endurance);}
+    public void costSpell(int cost){mana-=cost;}
+    public void costSkill(int cost){stamina-=cost;}
+    
 }
