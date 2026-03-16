@@ -45,7 +45,7 @@ public class Personagem {
     public int getSpeed() {
         return speed;
     }
-    public void rollDefense(int dmg) {
+    public void defense(int dmg) {
         health -= (dmg-endurance);
     }
     public void costSpell(int cost){
