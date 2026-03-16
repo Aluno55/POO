@@ -9,7 +9,8 @@ public class App {
         // System.out.println(b.IsOnOff());
 
         Caneta bic = new Caneta();
+        System.out.println(bic.inkDraw(0, 0, 300, 400));
         bic.capSwitch();
-        System.out.println(bic.inkDraw(0, 0, 30000, 40000));
+        System.out.println(bic.inkDraw(0, 0, 300, 400));
     }
 }

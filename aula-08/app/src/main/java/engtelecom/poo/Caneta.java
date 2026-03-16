@@ -34,7 +34,7 @@ public class Caneta{
             return("Percorrir " + d + "cm e gastei toda a tinta");
         }
         inkPercent -= spent;
-        }
+        } else {return "Abre a caneta abestado";}
         return ("Percorrir " + d + "cm e gastei " + spent + "% de tinta");
     }
 }
