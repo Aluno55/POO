@@ -5,12 +5,8 @@ public class Lampada {
     private boolean ligada = false;
 
     // Métodos
-    public void SwitchButton(){
-        ligada = !ligada;
-    }
+    public void SwitchButton(){ ligada = !ligada; }
 
-    public boolean IsOnOff(){
-        return ligada;
-    }
+    public boolean IsOnOff(){ return ligada; }
     
 }
