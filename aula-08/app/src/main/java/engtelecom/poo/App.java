@@ -9,7 +9,7 @@ public class App {
         // System.out.println(b.IsOnOff());
 
         Caneta bic = new Caneta();
-        bic.definirCor("vermelho");
-        System.out.println(bic.obterCor());
+        bic.capSwitch();
+        System.out.println(bic.inkDraw(0, 0, 30000, 40000));
     }
 }
