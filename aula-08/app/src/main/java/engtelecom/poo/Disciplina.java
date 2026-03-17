@@ -7,17 +7,18 @@ public class Disciplina {
     public double getNotaProva (int qualProva){return prova[qualProva];}
 
     public void setNotaProva (double nota){
-        double[prova.length] novo;
-        if (numeroProvas < prova.length){
-            prova(numeroProvas) = nota;
-            numeroProvas++;
+        double[] novo = new double[prova.length+1];
+        for (int i = 0; i < prova.length; i++) {
+            novo[i] = prova[i];
         }
+        novo[prova.length+1]
+        prova = novo;
     }
 
     public double Media (){
     double soma = 0;
         for (int i = 0; i < numeroProvas; i++)
             {soma += provas[i];}
-        return ((soma + atividade) / (numeroProvas + 1));    
+        return ((soma + atividade) / numeroProvas);    
     }
 }
