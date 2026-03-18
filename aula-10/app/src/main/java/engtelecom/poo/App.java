@@ -3,9 +3,8 @@ package engtelecom.poo;
 public class App {
     public static void main(String[] args) {
 
-        Pessoa p = new Pessoa("Jon","0123456789","jon@gar.field");
-        System.out.println(p);
-
-        Carro c = new Carro("Fusca", 30);
+        Horario h = new Horario();
+        h.setHorario(1);
+        h.setHorario(27);
     }
 }
