@@ -7,12 +7,12 @@ public class Horario {
 
     public void setHorario(int hora, int minuto, int segundo) {
         if (segundo >=60){
-            // segundo%60;
+            // m = segundo%60; minuto += m;
         }
         else{this.segundo = segundo;}
 
         if (minuto >=60){
-            // minuto%60;
+            // h = minuto%60; hora += h;
         }
         else{this.minuto = minuto;}
         
@@ -20,13 +20,10 @@ public class Horario {
         else {this.hora = hora;}
     }
 
-    public void setHorario(int hora, int minuto) {
-        setHorario(hora, minuto, segundo);
-    }
-
+    public void setHorario(int hora, int minuto){
+        setHorario(hora, minuto, segundo);}
     public void setHorario(int hora) {
-        setHorario(hora, minuto, segundo);
-    }
+        setHorario(hora, minuto, segundo);}
 
     public String toString(){ 
         return String.format("%02d:%02d:%02d", hora, minuto, segundo);
