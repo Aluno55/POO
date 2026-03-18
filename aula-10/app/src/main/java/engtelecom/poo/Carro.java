@@ -7,7 +7,7 @@ public class Carro {
 
     public Carro(String modelo, double velocidadeMax) {
         this.modelo = modelo;
-        this.velocidadeMax = velocidadeMax;
+        (velocidadeMax<=300)? this.velocidadeMax = velocidadeMax : this.velocidadeMax = 300;
     }
 
     public String getModelo() {return modelo;}
@@ -21,8 +21,8 @@ public class Carro {
 
     //velocidade maxima de 200 e minimo de 0
     public void acelerar(double a) {
-        if (velocidadeAtual<200){velocidadeAtual+=a;}
-        if (velocidadeAtual>200){velocidadeAtual = 200;}
+        if (velocidadeAtual<velocidadeMax){velocidadeAtual+=a;}
+        if (velocidadeAtual>velocidadeMax){velocidadeAtual = velocidadeMax;}
     }
     public void frear(double a){
         if (velocidadeAtual>0){velocidadeAtual-=a;}
