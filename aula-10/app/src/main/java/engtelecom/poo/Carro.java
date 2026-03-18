@@ -4,10 +4,12 @@ public class Carro {
     private String modelo;
     private double velocidadeAtual = 0;
     private double velocidadeMax;
+    private final double VELOCIDADE_MAXIMA = 300;
+    private final double VELOCIDADE_MINIMA = 0;
 
     public Carro(String modelo, double velocidadeMax) {
         this.modelo = modelo;
-        (velocidadeMax<=300)? this.velocidadeMax = velocidadeMax : this.velocidadeMax = 300;
+        if (velocidadeMax<=VELOCIDADE_MAXIMA) {this.velocidadeMax = velocidadeMax;} else {this.velocidadeMax = VELOCIDADE_MAXIMA;};
     }
 
     public String getModelo() {return modelo;}
@@ -19,13 +21,12 @@ public class Carro {
     public double getVelocidadeMax() {return velocidadeMax;}
     public void setVelocidadeMax(double velocidadeMax) {this.velocidadeMax = velocidadeMax;}
 
-    //velocidade maxima de 200 e minimo de 0
     public void acelerar(double a) {
         if (velocidadeAtual<velocidadeMax){velocidadeAtual+=a;}
         if (velocidadeAtual>velocidadeMax){velocidadeAtual = velocidadeMax;}
     }
     public void frear(double a){
-        if (velocidadeAtual>0){velocidadeAtual-=a;}
-        if (velocidadeAtual <0){velocidadeAtual = 0;}
+        if (velocidadeAtual>VELOCIDADE_MINIMA){velocidadeAtual-=a;}
+        if (velocidadeAtual<VELOCIDADE_MINIMA){velocidadeAtual=VELOCIDADE_MINIMA;}
     }
 }
