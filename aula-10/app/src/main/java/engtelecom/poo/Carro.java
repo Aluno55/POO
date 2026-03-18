@@ -8,17 +8,20 @@ public class Carro {
         return velocidadeAtual;
     }
 
-    public void acelerePorA(double a) {
+    //velocidade maxima de 200 e minimo de 0
+    public void acelerar(double a) {
         if (velocidadeAtual<200){
-        velocidadeAtual+=a;}
-        else if (velocidadeAtual > 200){
+            velocidadeAtual+=a;
+        }
+        if (velocidadeAtual>200){
             velocidadeAtual = 200;
         }
     }
-    public void freiePorA(double a){
+    public void freiar(double a){
         if (velocidadeAtual>0){
-        velocidadeAtual-=a;}
-        else if (velocidadeAtual <0){
+            velocidadeAtual-=a;
+        }
+        if (velocidadeAtual <0){
             velocidadeAtual = 0;
         }
     }
