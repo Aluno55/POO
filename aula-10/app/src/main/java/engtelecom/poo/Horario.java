@@ -7,16 +7,20 @@ public class Horario {
 
     public void setHorario(int hora, int minuto, int segundo) {
         if (segundo >=60){
-            // m = segundo%60; minuto += m;
+            minuto = segundo/60;
+            this.segundo = segundo%60;
         }
         else{this.segundo = segundo;}
 
         if (minuto >=60){
-            // h = minuto%60; hora += h;
+            hora += minuto/60;
+            this.minuto = minuto%60;
         }
         else{this.minuto = minuto;}
         
-        if (hora >= 24){}
+        if (hora >= 24){
+            this.hora = hora%24;
+        }
         else {this.hora = hora;}
     }
 
