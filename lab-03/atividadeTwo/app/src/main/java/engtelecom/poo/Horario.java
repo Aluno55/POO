@@ -67,7 +67,7 @@ public class Horario {
     private String conversorExtenso(int valor){
         return switch (valor) {
             case 1 -> "um";
-            case 2 -> "duas";
+            case 2 -> "dois";
             case 10 -> "dez";
             case 3 -> "tres";
             case 4 -> "quatro";
@@ -86,13 +86,18 @@ public class Horario {
             case 18 -> "dezoito";
             case 19 -> "dezenove";
             case 20 -> "vinte";
+            case 30 -> "trinta";
+            case 40 -> "quarenta";
+            case 50 -> "cinquenta";
             default -> "";
         };
     }
 
     public String toExtenso(){
         String horas = (this.hora == 1)? "uma" : (this.hora ==2)? "duas" : conversorExtenso((hora/10)*10) + " " + conversorExtenso(hora%10);
+
         String minutos = conversorExtenso((minuto/10)*10) + " " + conversorExtenso(minuto%10);
+
         String segundos = conversorExtenso((segundo/10)*10) + " " + conversorExtenso(segundo%10);
         
         return horas + " horas e " + minutos + " minutos e " + segundos + " segundos";
