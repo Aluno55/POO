@@ -1,34 +1,33 @@
 package engtelecom.poo;
 
 public class Ponto {
-    private double xPonto1;
-    private double xPonto2;
-    private double yPonto1;
-    private double yPonto2;
+    private double x;
+    private double y;
 
-    public void setxPonto1(double xPonto1) {
-        this.xPonto1 = xPonto1;
+    public Ponto(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
-    public double getxPonto1() {
-        return xPonto1;
+
+    public void setX(double x) {
+        this.x = x;
     }
-    public void setxPonto2(double xPonto2) {
-        this.xPonto2 = xPonto2;
+    public double getX() {
+        return x;
     }
-    public double getxPonto2() {
-        return xPonto2;
+    public void setY(double y) {
+        this.y = y;
     }
-    public void setyPonto1(double yPonto1) {
-        this.yPonto1 = yPonto1;
+    public double getY() {
+        return y;
     }
-    public double getyPonto1() {
-        return yPonto1;
+
+    @Override
+    public String toString() {
+        return ("(" + x + ", " + y + ")");
     }
-    public void setyPonto2(double yPonto2) {
-        this.yPonto2 = yPonto2;
+
+    public double distancia(Ponto a, Ponto b){
+        return Math.sqrt(Math.pow((a.x - b.x), 2) + Math.pow((a.y - b.y), 2));
     }
-    public double getyPonto2() {
-        return yPonto2;
-    }
-    
 }
