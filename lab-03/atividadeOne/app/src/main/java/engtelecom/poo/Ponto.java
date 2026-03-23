@@ -27,7 +27,7 @@ public class Ponto {
         return ("(" + x + ", " + y + ")");
     }
 
-    public double distancia(Ponto ponto1, Ponto ponto2){
-        return Math.sqrt(Math.pow((ponto1.x - ponto2.x), 2) + Math.pow((ponto1.y - ponto2.y), 2));
+    public double distancia(Ponto ponto2){
+        return Math.sqrt(Math.pow((this.x - ponto2.x), 2) + Math.pow((this.y - ponto2.y), 2));
     }
 }

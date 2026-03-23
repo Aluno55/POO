@@ -6,7 +6,9 @@ public class App {
         Ponto b = new Ponto(0, 0);
         a.setX(3);
         a.setY(4);
-        System.out.println(a.distancia(a, b));
-        System.out.println(b.distancia(b, a));
+        System.out.println(a.distancia(b));
+        System.out.println(b.distancia(a));
+        System.out.println(a.toString());
+
     }
 }
