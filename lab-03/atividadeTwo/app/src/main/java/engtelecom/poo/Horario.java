@@ -10,16 +10,10 @@ public class Horario {
         setMinuto(minuto);
         setSegundo(segundo);
     }
-
-    public Horario(int hora, int minuto){
-        this(hora, minuto, 0);}
-
-    public Horario(int hora) {
-        this(hora, 0,0);}
+    public Horario(int hora, int minuto){this(hora, minuto, 0);}
+    public Horario(int hora) {this(hora, 0,0);}
   
-    public int getHora() {
-        return hora;
-    }
+    public int getHora() {return hora;}
     public boolean setHora(int hora) {
         if (hora >= 24 || hora < 0){
             this.hora = 0;
@@ -30,9 +24,7 @@ public class Horario {
             return true;
         }
     }
-    public int getMinuto() {
-        return minuto;
-    }
+    public int getMinuto() {return minuto;}
     public boolean setMinuto(int minuto) {
         if (minuto >=60 || minuto < 0){
             this.minuto = 0;
@@ -43,9 +35,7 @@ public class Horario {
             return true;
         }
     }
-    public int getSegundo() {
-        return segundo;
-    }
+    public int getSegundo() {return segundo;}
     public boolean setSegundo(int segundo) {
         if (segundo >=60 || segundo < 0){
             this.segundo = 0;
@@ -56,13 +46,10 @@ public class Horario {
             return true;
         }
     }
-    public long toSeconds(){
-        return this.hora * 3600 + this.minuto * 60 + segundo;
-    }
 
-    public long distance(Horario b) {
-        return Math.abs(toSeconds() - b.toSeconds());
-    }
+    public long toSeconds(){return this.hora * 3600 + this.minuto * 60 + segundo;}
+
+    public long distance(Horario b) {return Math.abs(toSeconds() - b.toSeconds());}
 
     private String conversorExtenso(int valor){
         return switch (valor) {
@@ -82,7 +69,7 @@ public class Horario {
             case 14 -> "quatorze";
             case 15 -> "quinze";
             case 16 -> "dezesseis";
-            case 17 -> "dezesseis";
+            case 17 -> "dezessete";
             case 18 -> "dezoito";
             case 19 -> "dezenove";
             case 20 -> "vinte";
@@ -104,8 +91,6 @@ public class Horario {
         if (minuto == 0){minutos = "";}
         if (hora == 0){horas = "";}
         
-        
-
         return horas + " e " + minutos + " e " + segundos;
     }
 
