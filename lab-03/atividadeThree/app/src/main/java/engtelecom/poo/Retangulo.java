@@ -34,7 +34,7 @@ public class Retangulo {
     }
 
     public int area(){return altura * largura;}
-    public int perimeter(){return 2*area();}
+    public int perimeter(){return 2*(altura+largura);}
 
     @Override
     public String toString() {
@@ -44,11 +44,13 @@ public class Retangulo {
             topbottom = "+" + "-".repeat(largura-2) + "+\n";
             for (int i = altura-2; i > 0; i--) {
                 height += "|" + " ".repeat(largura-2) + "|\n";
-        }} else {
-            topbottom = "\\u250c" + "\\u2500".repeat(largura-2) + "\\u2510\n";
-            for (int i = altura-2; i > 0; i--) {
-                height += "\\u2502" + " ".repeat(largura-2) + "\\u2502\n";
-        }}
         return topbottom + height + topbottom;
+        }} else {
+            topbottom = "\u250c" + "\u2500".repeat(largura-2) + "\u2510\n";
+            for (int i = altura-2; i > 0; i--) {
+                height += "\u2502" + " ".repeat(largura-2) + "\u2502\n";
+        return topbottom + height + "\u2514" + "\u2500".repeat(largura-2) + "\u2518";
+        }}
+        return "";
     }
 }
