@@ -27,9 +27,10 @@ public class Retangulo {
 
     public String getCodification() {return codification;}
     public boolean setCodification(String codification) {
-        if (codification.equalsIgnoreCase("UTF8") || codification.equalsIgnoreCase("ASCII")){return false;} else {
-        this.codification = codification;
-        return true;}
+        if (codification.equalsIgnoreCase("UTF8") || codification.equalsIgnoreCase("ASCII")){
+            this.codification = codification;
+            return true;
+        } else {return false;}
     }
 
     public int area(){return altura * largura;}
