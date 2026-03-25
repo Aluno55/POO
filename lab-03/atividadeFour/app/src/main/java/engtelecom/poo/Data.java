@@ -15,7 +15,7 @@ public class Data {
     
     public int getDia() {return dia;}
     public boolean setDia(int dia) {
-        if(dia > 0 || dia < month2Day()){
+        if(dia > 0 || dia < month2Day(mes)){
             this.dia = dia;
             return true;}
         return false;
@@ -35,12 +35,20 @@ public class Data {
         return false;
     }
 
+    public int distanciaDia(Data b){
+        int contagem = 0;
+        for (int i = b.mes; i > mes; i--) {
+            contagem += month2Day(i);
+        }
+        return contagem;
+    }
+
     private boolean bissexto(){
         if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)){return true;}
         return false;
     }
-    private int month2Day(){
-        switch (mes) {
+    private int month2Day(int m){
+        switch (m) {
             case 1:
             case 3:
             case 5:
@@ -61,8 +69,4 @@ public class Data {
         return String.format("%02d/%02d/%02d", dia, mes, ano);
     }
 
-    public int distanciaDia(Data b){
-        int a = b.mes;
-        return 1;
-    }
 }
