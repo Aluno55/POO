@@ -27,7 +27,7 @@ public class Retangulo {
 
     public String getCodification() {return codification;}
     public boolean setCodification(String codification) {
-        if (codification == "UTF8" || codification == "ASCII"){return false;} else {
+        if (codification.equalsIgnoreCase("UTF8") || codification.equalsIgnoreCase("ASCII")){return false;} else {
         this.codification = codification;
         return true;}
     }
@@ -35,5 +35,13 @@ public class Retangulo {
     public int area(){return altura * largura;}
     public int perimeter(){return 2*area();}
 
-    //falta o toString
+    @Override
+    public String toString() {
+        String topbottom = "+" + "-".repeat(largura-2) + "+\n";
+        String height = "";
+        for (int i = altura-2; i > 0; i--) {
+            height += "|" + " ".repeat(largura-2) + "|\n";
+        }
+        return topbottom + height + topbottom;
+    }
 }
