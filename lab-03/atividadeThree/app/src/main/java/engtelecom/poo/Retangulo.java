@@ -1,4 +1,4 @@
-// package engtelecom.poo;
+package engtelecom.poo;
 
 public class Retangulo {
     private int largura = 4;
