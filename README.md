@@ -12,9 +12,12 @@ gradle -q run < asterisco.txt
 ## Aulas
 - [Aula 01](./aula-01/) - Introdução à linguagem Java
 - [Aula 04](./aula-04/) - Iniciando Java
-<!-- Lembrete: mkdir aula-N
+<!-- Lembrete:
+mkdir aula-N
 cd aula-N
 git init
+git config --global user.name "nome"
+git config --global user.email "email"
 git clone https://github.com/Aluno55/POO.git
 code .
 -->

@@ -15,7 +15,7 @@ public class Data {
     
     public int getDia() {return dia;}
     public boolean setDia(int dia) {
-        if(dia > 0 || dia < month2day()){
+        if(dia > 0 || dia < month2Day()){
             this.dia = dia;
             return true;}
         return false;
@@ -39,7 +39,7 @@ public class Data {
         if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)){return true;}
         return false;
     }
-    private int month2day(){
+    private int month2Day(){
         switch (mes) {
             case 1:
             case 3:
@@ -59,5 +59,10 @@ public class Data {
 
     public String toString(){ 
         return String.format("%02d/%02d/%02d", dia, mes, ano);
+    }
+
+    public int distanciaDia(Data b){
+        int a = b.mes;
+        return 1;
     }
 }
