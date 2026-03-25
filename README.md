@@ -9,6 +9,8 @@ gradle init --package=engtelecom.poo
 
 gradle -q run < asterisco.txt
 -->
+- [Laboratório 03](./lab-03/) - Lista de Exercicios para Objetos
+
 ## Aulas
 - [Aula 01](./aula-01/) - Introdução à linguagem Java
 - [Aula 04](./aula-04/) - Iniciando Java
