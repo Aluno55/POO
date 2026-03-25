@@ -83,14 +83,18 @@ public class Horario {
     public String toExtenso(){
         String horas = ((this.hora == 1)? "uma" : (this.hora ==2)? "duas" : (hora < 20)? conversorExtenso(hora) : conversorExtenso((hora/10)*10) + " " + conversorExtenso(hora%10)) + " horas";
 
-        String minutos = conversorExtenso((minuto/10)*10) + " " + conversorExtenso(minuto%10) + " minutos";
+        String minutos = ((minuto < 20)? conversorExtenso(minuto) : conversorExtenso((minuto/10)*10) + " " + conversorExtenso(minuto%10)) + " minutos";
 
-        String segundos = conversorExtenso((segundo/10)*10) + " " + conversorExtenso(segundo%10) + " segundos";
+        String segundos = ((segundo < 20)? conversorExtenso(segundo) : conversorExtenso((segundo/10)*10) + " " + conversorExtenso(segundo%10)) + " segundos";
         
-        if (segundo == 0){segundos = "";}
-        if (minuto == 0){minutos = "";}
-        if (hora == 0){horas = "";}
-        
+        if (minuto == 0){
+            minutos = "";
+            return horas;
+        }        
+        if (segundo == 0){
+            segundos = "";
+            return horas + " e " + minutos;
+        }
         return horas + " e " + minutos + " e " + segundos;
     }
 
