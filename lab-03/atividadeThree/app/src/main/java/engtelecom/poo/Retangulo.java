@@ -37,11 +37,17 @@ public class Retangulo {
 
     @Override
     public String toString() {
-        String topbottom = "+" + "-".repeat(largura-2) + "+\n";
+        String topbottom = "";
         String height = "";
-        for (int i = altura-2; i > 0; i--) {
-            height += "|" + " ".repeat(largura-2) + "|\n";
-        }
+        if (codification.equalsIgnoreCase("ASCII")){
+            topbottom = "+" + "-".repeat(largura-2) + "+\n";
+            for (int i = altura-2; i > 0; i--) {
+                height += "|" + " ".repeat(largura-2) + "|\n";
+        }} else {
+            topbottom = "\\u250c" + "\\u2500".repeat(largura-2) + "\\u2510\n";
+            for (int i = altura-2; i > 0; i--) {
+                height += "\\u2502" + " ".repeat(largura-2) + "\\u2502\n";
+        }}
         return topbottom + height + topbottom;
     }
 }
