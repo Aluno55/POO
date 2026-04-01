@@ -2,22 +2,29 @@ package engtelecom.poo;
 
 import java.util.ArrayList;
 
-import javax.print.attribute.standard.MediaSize.ISO;
-
 public class App {
     public static void menu(){
         int op = 0;
+        int num = 0;
         var c = new ArrayList<Conta>();
         // criar conta; depositar; sacar; listar contas; sair;
+
         while (op != 5) {
             if (op == 1) {
-                String s = IO.readln("Entre com um nome: ");
-                Conta conta = new Conta(1, s, 0); 
+                String n = IO.readln("Entre com um nome: ");
+                double s = Double.parseDouble("Entre com o saldo: ");
+                Conta conta = new Conta(num, n, s); 
                 c.add(conta);
+                num++;
             }
-            if (op == 2) {
 
+            if (op == 2) {
+                double s = Double.parseDouble("Vai depositar quantos?: ");
+                int qualConta = Integer.parseInt("Qual o numero da conta?: ");
+                var newc = c.get(qualConta-1);
+                newc.depositar(s);
             }
+            
         }
     }
     public static void main(String[] args) {
