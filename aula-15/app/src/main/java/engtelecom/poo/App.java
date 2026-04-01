@@ -7,13 +7,13 @@ public class App {
     // public App(){this.contas = new ArrayList<>();}
 
     public void menu(){
-        int op = Integer.parseInt("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n");
+        int op = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n"));
         int num = 0;
         // criar conta; listar contas; depositar; sacar; sair;
         while (op != 5) {
             if (op == 1) {
                 String n = IO.readln("Entre com um nome: ");
-                double s = Double.parseDouble("Entre com o saldo: ");
+                double s = Double.parseDouble(IO.readln("Entre com o saldo: "));
                 Conta conta = new Conta(num, n, s); 
                 contas.add(conta);
                 num++;
@@ -26,17 +26,16 @@ public class App {
             }
 
             if (op == 3) {
-                double s = Double.parseDouble("Vai depositar quantos?: ");
-                int qualConta = Integer.parseInt("Qual o numero da conta?: ");
+                double s = Double.parseDouble(IO.readln("Vai depositar quantos?: "));
+                int qualConta = Integer.parseInt(IO.readln("Qual o numero da conta?: "));
                 var newc = contas.get(qualConta-1);
                 newc.depositar(s);
 
-                contas.forEach(e ->{
-                    if (num == e.getConta()) {
-                        e.depositar(s);
-                    }
-                }
-                );
+                // contas.forEach(e ->{
+                //     if (e.getConta() == num) {
+                //         e.depositar(s);
+                //     }
+                // });
             }
 
         }
