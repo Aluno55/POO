@@ -38,6 +38,16 @@ public class App {
                 // });
             }
 
+            if (op == 4) {
+                double s = Double.parseDouble(IO.readln("Vai sacar quantos?: "));
+                int qualConta = Integer.parseInt(IO.readln("Qual o numero da conta?: "));
+                var newc = contas.get(qualConta-1);
+                newc.sacar(s);
+            }
+
+            if (op == 5) {
+                System.out.println("Finalizando...");
+            }
         }
     }
     public static void main(String[] args) {
