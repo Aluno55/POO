@@ -2,8 +2,28 @@ package engtelecom.poo;
 
 import java.util.ArrayList;
 
+import javax.print.attribute.standard.MediaSize.ISO;
+
 public class App {
+    public static void menu(){
+        int op = 0;
+        var c = new ArrayList<Conta>();
+        // criar conta; depositar; sacar; listar contas; sair;
+        while (op != 5) {
+            if (op == 1) {
+                String s = IO.readln("Entre com um nome: ");
+                Conta conta = new Conta(1, s, 0); 
+                c.add(conta);
+            }
+            if (op == 2) {
+
+            }
+        }
+    }
     public static void main(String[] args) {
+        
+        menu();
+
         // List
         var s = "João"; // var é o programa adivinhando qual tipo de variavel é
         ArrayList<String> l = new ArrayList<>();
