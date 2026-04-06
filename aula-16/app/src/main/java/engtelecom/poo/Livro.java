@@ -3,7 +3,7 @@ package engtelecom.poo;
 public class Livro {
     private String titulo;
     private String autor;
-    private String isbn;
+    private final String isbn;
     private int anoPublication;
 
     public Livro(String titulo, String autor, String isbn, int anoPublication) {
@@ -33,4 +33,6 @@ public class Livro {
                 """, isbn, titulo, autor, anoPublication
         );
     }
+
+
 }
