@@ -7,10 +7,11 @@ public class App {
     // public App(){this.contas = new ArrayList<>();}
 
     public void menu(){
-        int op = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n"));
+        int op;
         int num = 0;
         // criar conta; listar contas; depositar; sacar; sair;
-        while (op != 5) {
+        do {
+            op = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n4-sacar\n5-sair\n"));
             if (op == 1) {
                 String n = IO.readln("Entre com um nome: ");
                 double s = Double.parseDouble(IO.readln("Entre com o saldo: "));
@@ -28,27 +29,27 @@ public class App {
             if (op == 3) {
                 double s = Double.parseDouble(IO.readln("Vai depositar quantos?: "));
                 int qualConta = Integer.parseInt(IO.readln("Qual o numero da conta?: "));
-                var newc = contas.get(qualConta-1);
-                newc.depositar(s);
-
-                // contas.forEach(e ->{
-                //     if (e.getConta() == num) {
-                //         e.depositar(s);
-                //     }
-                // });
+                contas.forEach(e ->{
+                    if (e.getConta() == qualConta) {
+                        e.depositar(s);
+                    }
+                });
             }
 
             if (op == 4) {
                 double s = Double.parseDouble(IO.readln("Vai sacar quantos?: "));
                 int qualConta = Integer.parseInt(IO.readln("Qual o numero da conta?: "));
-                var newc = contas.get(qualConta-1);
-                newc.sacar(s);
+                contas.forEach(e ->{
+                    if (e.getConta() == qualConta) {
+                        e.sacar(s);
+                    }
+                });
             }
 
             if (op == 5) {
                 System.out.println("Finalizando...");
             }
-        }
+        }while (op != 5);
     }
     public static void main(String[] args) {
         App app = new App();
