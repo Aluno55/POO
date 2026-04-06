@@ -8,7 +8,7 @@ public class App {
 
     public void menu(){
         int options;
-        int num = 0;
+        int num = 1;
         // criar conta; listar contas; depositar; sacar; sair;
         do {
             options = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n4-sacar\n5-sair\n"));
