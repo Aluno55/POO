@@ -9,14 +9,14 @@ public class App {
         do {
         /*
         1- cadastrar livro
-    2- listar isbn & titulo
-    3- consultar livro por isbn, imprimir todos os dados
+        2- listar isbn & titulo
+        3- consultar livro por isbn, imprimir todos os dados
     4- consultar livro por autor, imprimir todos os dados
     5- atualizar dados do livro, menos isbn
     6- remover livro por isbn
         7- sair
         */
-            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-Criar livro\n7-Sair\n"));
+            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-Criar livro\n2-Listagem de Títulos com ISBN\n3-Consultar Livro pelo ISBN\n7-Sair\n"));
             if (option == 1){
                 String author = IO.readln("Entre com o Autor: ");
                 String isbn = IO.readln("Entre com o ISBN: ");
@@ -27,9 +27,34 @@ public class App {
             }
 
             if (option == 2){
-                acervo.forEach((k, v)->{});
+                acervo.forEach((k, v)->{
+                    System.out.println("ISBN: " + v.getIsbn() + "\nTítulo: " + v.getTitulo());
+                });
             }
 
+            if (option == 3){
+                String isbn = IO.readln("Entre com o ISBN: ");              
+                if (acervo.containsKey(isbn)){
+                    System.out.println(acervo.get(isbn));
+                }
+            }
+
+            if (option == 4){
+
+            }
+
+            if (option == 5){
+
+            }
+
+            if (option == 6){
+                String isbn = IO.readln("Entre com o ISBN: ");
+                if (acervo.containsKey(isbn)){
+                    Livro op3 = acervo.get(isbn);
+                    System.out.println(op3);
+                }
+            }
+            
             if (option == 7){System.out.println("Saindo...");}
         
         } while (option !=7);
