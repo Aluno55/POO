@@ -19,7 +19,7 @@ public class Conta {
     public void depositar(double d){setSaldo(this.saldo + d);}
 
     public String toString(){
-        return String.format("Conta: %d\nTitulo: %s\nSaldo: %.2f", conta, nome, saldo);
+        return String.format("Conta: %d\nTitulo: %s\nSaldo: %.2f\n", conta, nome, saldo);
         // return ("""
         //        Conta: %d
         //        Titular: %s

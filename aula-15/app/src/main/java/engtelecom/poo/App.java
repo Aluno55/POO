@@ -7,12 +7,12 @@ public class App {
     // public App(){this.contas = new ArrayList<>();}
 
     public void menu(){
-        int op;
+        int options;
         int num = 0;
         // criar conta; listar contas; depositar; sacar; sair;
         do {
-            op = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n4-sacar\n5-sair\n"));
-            if (op == 1) {
+            options = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-criar conta\n2-listar contas\n3-depositar\n4-sacar\n5-sair\n"));
+            if (options == 1) {
                 String n = IO.readln("Entre com um nome: ");
                 double s = Double.parseDouble(IO.readln("Entre com o saldo: "));
                 Conta conta = new Conta(num, n, s); 
@@ -20,13 +20,13 @@ public class App {
                 num++;
             }
 
-            if (op == 2) {
+            if (options == 2) {
                 contas.forEach(e -> {
                 System.out.println(e);
-                });
+                });  // for each <e> in <contas>, do {this} 
             }
 
-            if (op == 3) {
+            if (options == 3) {
                 double s = Double.parseDouble(IO.readln("Vai depositar quantos?: "));
                 int qualConta = Integer.parseInt(IO.readln("Qual o numero da conta?: "));
                 contas.forEach(e ->{
@@ -36,7 +36,7 @@ public class App {
                 });
             }
 
-            if (op == 4) {
+            if (options == 4) {
                 double s = Double.parseDouble(IO.readln("Vai sacar quantos?: "));
                 int qualConta = Integer.parseInt(IO.readln("Qual o numero da conta?: "));
                 contas.forEach(e ->{
@@ -46,10 +46,10 @@ public class App {
                 });
             }
 
-            if (op == 5) {
+            if (options == 5) {
                 System.out.println("Finalizando...");
             }
-        }while (op != 5);
+        }while (options != 5);
     }
     public static void main(String[] args) {
         App app = new App();
