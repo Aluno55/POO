@@ -11,12 +11,12 @@ public class App {
         1- cadastrar livro
         2- listar isbn & titulo
         3- consultar livro por isbn, imprimir todos os dados
-    4- consultar livro por autor, imprimir todos os dados
+        4- consultar livro por autor, imprimir todos os dados
     5- atualizar dados do livro, menos isbn
         6- remover livro por isbn
         7- sair
         */
-            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-Criar livro\n2-Listagem de Títulos com ISBN\n3-Consultar Livro pelo ISBN\n6-Remover livro\n7-Sair\n"));
+            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-Criar livro\n2-Listagem de Títulos com ISBN\n3-Procurar Livro pelo ISBN\n4-Procurar Livro pelo Autor\n6-Remover livro\n7-Sair\n"));
             if (option == 1){
                 String author = IO.readln("Entre com o Autor: ");
                 String isbn = IO.readln("Entre com o ISBN: ");
@@ -30,29 +30,48 @@ public class App {
                     System.out.println("ISBN: " + v.getIsbn() + "\nTítulo: " + v.getTitulo());
                 });
             }
+
+            boolean encontrar = 0;
             if (option == 3){
                 String isbn = IO.readln("Entre com o ISBN: ");              
                 if (acervo.containsKey(isbn)){
                     System.out.println(acervo.get(isbn));
+                    encontrar = 1;
                 }
+                if (encontrar == 0){System.out.println("Nenhum livro encontrado");}
             }
-            if (option == 4){
 
+            if (option == 4){
+                String author = IO.readln("Entre com o Autor: ");
+                acervo.forEach((k, v)->{
+                    if (v.getAutor().equalsIgnoreCase(author)){System.out.println(v);}
+                    encontrar = 1;
+                });
+                if (encontrar == 0){System.out.println("Nenhum livro encontrado");}
             }
 
             if (option == 5){
-
+                String isbn = IO.readln("Entre com o ISBN: ");
+                if (acervo.containsKey(isbn)){
+                    Livro bookNew = acervo.get(isbn);
+                    String authorNew = IO.readln("Entre com o novo Autor: ");
+                    String titleNew = IO.readln("Entre com o novo Titulo: ");
+                    int yearNew = Integer.parseInt(IO.readln("Entre com o novo ano de publicação:"));
+                    bookNew.setAnoPublication(yearNew);
+                    bookNew.setAutor(authorNew);
+                    bookNew.setTitulo(titleNew);
+                } else {System.out.println("Nenhum livro encontrado");
             }
 
             if (option == 6){
                 String isbn = IO.readln("Entre com o ISBN: ");
                 if (acervo.containsKey(isbn)){
                     acervo.remove(isbn);
-                }
+                } else {System.out.println("Nenhum livro encontrado");}
             }
             
             if (option == 7){System.out.println("Saindo...");}
-        
+            if (option>7 || option<1){System.out.println("Escolha uma opção valida");}
         } while (option !=7);
     }
     
