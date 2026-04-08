@@ -19,10 +19,7 @@ public class Livro {
     public void setAutor(String autor) {this.autor = autor;}
     public String getIsbn() {return isbn;}
     public int getAnoPublication() {return anoPublication;}
-
-    public void setAnoPublication(int anoPublication) {
-        this.anoPublication = anoPublication;
-    }
+    public void setAnoPublication(int anoPublication) {this.anoPublication = anoPublication;}
 
     public String toString(){
         return String.format("""
