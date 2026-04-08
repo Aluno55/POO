@@ -1,5 +1,4 @@
 package engtelecom.poo;
-
 import java.util.HashMap;
 
 public class App {
@@ -7,15 +6,6 @@ public class App {
     public void livraria () {
         int option;
         do {
-        /*
-        1- cadastrar livro
-        2- listar isbn & titulo
-        3- consultar livro por isbn, imprimir todos os dados
-        4- consultar livro por autor, imprimir todos os dados
-        5- atualizar dados do livro, menos isbn
-        6- remover livro por isbn
-        7- sair
-        */
             option = Integer.parseInt(IO.readln("Escolha uma das opções:\n1-Criar livro\n2-Listagem de Títulos com ISBN\n3-Procurar Livro pelo ISBN\n4-Procurar Livro pelo Autor\n5-Atualizar Livro\n6-Remover livro\n7-Sair\n"));
             if (option == 1){
                 String author = IO.readln("Entre com o Autor: ");
@@ -27,71 +17,58 @@ public class App {
             } 
             if (option == 2){
                 acervo.forEach((k, v)->{
-                    System.out.println("ISBN: " + v.getIsbn() + "\nTítulo: " + v.getTitulo());
+                    IO.println("ISBN: " + v.getIsbn() + "\nTítulo: " + v.getTitulo());
                 });
             }
-
+            
             if (option == 3){
                 String isbn = IO.readln("Entre com o ISBN: ");              
                 if (acervo.containsKey(isbn)){
-                    System.out.println(acervo.get(isbn));
+                    IO.println(acervo.get(isbn));
                 }
-                else{System.out.println("Nenhum livro encontrado");}
+                else{IO.println("Nenhum livro encontrado");}
             }
 
             if (option == 4){
                 String author = IO.readln("Entre com o Autor: ");
                 acervo.forEach((k, v)->{
                     if (v.getAutor().equalsIgnoreCase(author)){
-                        System.out.println(v);
+                        IO.println(v);
                     }
                 });
-                // {System.out.println("Nenhum livro encontrado");}
+                // {IO.println("Nenhum livro encontrado");}
             }
 
             if (option == 5){
                 String isbn = IO.readln("Entre com o ISBN: ");
                 if (acervo.containsKey(isbn)){
                     Livro bookNew = acervo.get(isbn);
-                    String authorNew = IO.readln("Entre com o novo Autor: ");
-                    String titleNew = IO.readln("Entre com o novo Titulo: ");
-                    int yearNew = Integer.parseInt(IO.readln("Entre com o novo ano de publicação:"));
-                    bookNew.setAnoPublication(yearNew);
-                    bookNew.setAutor(authorNew);
-                    bookNew.setTitulo(titleNew);
-                } else {System.out.println("Nenhum livro encontrado");}
+                    bookNew.setAnoPublication(Integer.parseInt(IO.readln("Entre com o novo ano de publicação:")));
+                    bookNew.setAutor(IO.readln("Entre com o novo Autor: "));
+                    bookNew.setTitulo(IO.readln("Entre com o novo Titulo: "));
+                } else {IO.println("Nenhum livro encontrado");}
             }
 
             if (option == 6){
                 String isbn = IO.readln("Entre com o ISBN: ");
                 if (acervo.containsKey(isbn)){
                     acervo.remove(isbn);
-                } else {System.out.println("Nenhum livro encontrado");}
+                } else {IO.println("Nenhum livro encontrado");}
             }
             
-            if (option == 7){System.out.println("Saindo...");}
-            if (option>7 || option<1){System.out.println("Escolha uma opção valida");}
+            if (option == 7){IO.println("Saindo...");}
+            if (option>7 || option<1){IO.println("Escolha uma opção valida");}
         } while (option !=7);
     }
     
     public static void main(String[] args) {
     App app = new App();
     app.livraria();
-    // Livro a = new Livro("The Sculpture", "S.C.P.", "948", 2010);
-    // Livro b = new Livro("The Hard-to-Kill Reptile", "S.C.P.", "244", 2010);
-    // Livro c = new Livro("The Doctor", "S.C.P.", "073", 2010);
-    // // if (acervo.containsKey(a.getIsbn())){
-    //     acervo.put(a.getIsbn(), a);
-    // // }
-    // acervo.put(b.getIsbn(), b);
-    // acervo.put(c.getIsbn(), c);
-
-    // acervo.forEach((k,v)->{
-    //     IO.println(String.format("--Livro--\n%s", v));
-    // });
-
-    // for (Livro liv: acervo.values()){
-    //     IO.println(liv);
-    // }
+        // hashmap.forEach((v1, v2) - > {function;})
+        // collection.forEach(variable -> {function})
+        // collection.forEach(classe::SingleFunction)
+        // for (classe var : collection) {function;}
+        // for (Map.Entry<classe, classe> valor : collection()){function;}
+        // hashmap is like a collection of collections, meanwhile a collection is like a FIFO, FILO, List, etc...
     }
 }

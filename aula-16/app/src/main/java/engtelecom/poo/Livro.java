@@ -30,6 +30,4 @@ public class Livro {
                 """, isbn, titulo, autor, anoPublication
         );
     }
-
-
 }
