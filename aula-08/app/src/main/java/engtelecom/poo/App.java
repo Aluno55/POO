@@ -6,16 +6,22 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
 
-        Stack<String> stacks = new Stack<>();
-        for (int i = 0; i < args.length; i++) {
-            stacks.push(IO.readln());
-        }
-        var c = '(';
-        stacks.search(c);
-        
-        
-        
+        Stack<Character> stacks = new Stack<>();
+        String chaves = IO.readln("Insira uma frase ou formula: ");
 
+        for (int i = 0; i < chaves.length(); i++) {
+            char c = chaves.charAt(i);
+            if (c == '(' || c == '{' || c == '['){
+                stacks.push(c);
+            } else if (c == ')' || c == ']' || c == '}'){
+                if (stacks.empty()) {IO.println("Fechou sem abrir");}
+                char t = stacks.pop();
+                if ((t == '(' && c == ')') || (t == '[' && c == ']') || (t == '{' && c == '}')){
+                    IO.println("Um par achado");
+                } else {IO.println("Erro em par");}
+            }
+        }  
+        
         // List<String> lista = Arrays.asList("Java", "Stream", "API", "Collections");
         // // Usando lambda
         // int maior = lista.stream()

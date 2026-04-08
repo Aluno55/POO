@@ -26,7 +26,7 @@ code .
 - [Aula 05](./aula-05/) - Primeiro uso do Intellij
 - [Aula 06](./aula-06/) - Argumentos & Começo do Lab-02
 - Aula 07 - Continuação do Lab-02 e como ler arquivos (verificar lab-02)
-- [Aula 08](./aula-08/) - Paradigma orientado a objetos
+- Aula 08 - Paradigma orientado a objetos
 <!--
 Abstração do problema: focar nos detalhes relevantes e representar na linguagem da solução
 Paradigma, a forma de como atacar os problemas, cada linguagem segue algum, por exemplo em C não tem objeto, Java não tem ponteiros :D, etc
@@ -39,3 +39,4 @@ Objeto é semelhante a DNA? Dita como é (atributos, caracteristicas), o que faz
 4- Herança
 5- Polimorfismo
 -->
+- [Aula 16 & 17](./aula-16/) - Collections & Streams
