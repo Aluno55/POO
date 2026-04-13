@@ -10,10 +10,9 @@ public class App {
 //
 // utilizar mermaid.ai/live ou draw.io
 // 
-// 
-// 
-// 
-// 
+        Motor m = new Motor(1, 0, 6);
+        Carro c = new Carro("nsei de carro", m);
+        c.acelerar(20);
 
 
 

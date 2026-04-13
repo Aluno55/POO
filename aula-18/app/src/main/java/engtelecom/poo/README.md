@@ -8,6 +8,8 @@ classDiagram
         + Retangulo ()    
         + getArea() int  
     }
+    Carro -->"1"Motor : propulsor
+    Carro "1"o--"3..4" Roda
 
     class Carro{
         - marca: String
@@ -15,7 +17,6 @@ classDiagram
         + Carro()
         + acelerar(v: int) void
     }
-    Carro -- Motor
     class Motor{
         - hp: int
         - giroAtual: int
@@ -23,4 +24,11 @@ classDiagram
         + Motor()
         + acelerar(v: int) void
     }
+    class Roda{
+        - diamtro: double
+        +Roda()
+        - material: String
+    }
+
+    livro *-- capitulo
 ```
