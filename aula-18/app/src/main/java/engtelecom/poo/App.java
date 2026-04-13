@@ -10,14 +10,14 @@ public class App {
 //
 // utilizar mermaid.ai/live ou draw.io
 // 
-        Motor m = new Motor(1, 0, 6);
-        Carro c = new Carro("nsei de carro", m);
-        c.acelerar(20);
-
-
-
-
-
+        Pessoa p = new Pessoa("The Author");
+        Livro l = new Livro("The Tale", p);
+        l.adicionarCapitulo("Void");
+        l.adicionarCapitulo("The Kingdom of the Dark");
+        l.adicionarCapitulo("The Majesty");
+        l.adicionarCapitulo("It's Show Time");
+        l.adicionarCapitulo("The Tale of Old");
+        l.adicionarCapitulo("Field of Roses & Gold");
         IO.println("Fim");
     }
 }
