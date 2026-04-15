@@ -1,7 +1,6 @@
 # Diagrama de Classe UML
 ```mermaid
 classDiagram
-
     class Retangulo{
         - int altura
         - int largura
@@ -45,5 +44,31 @@ classDiagram
     class Capitulo{
         - titulo: String
         +Capitulo()
+    }
+```
+```mermaid
+classDiagram
+    class Aviao{
+        - int tripulanteMax
+        - int passageiroMax
+        - MotorAviao propulsor
+        - int numMotores
+        - ArrayList~Motor~ motores
+        - String tipoMotor
+        - double pesoMax
+        - double combustivelMax
+        + acelerar(v: int) void
+        + possivelDecolar(peso: double, combustible: double, tripulante: int, passageiro: int) boolean
+        + Aviao(combustivelMax: double, pesoMax: double, numMotores: int, tipoMotor:String)
+    }
+    Aviao o-- MotorAviao
+    class MotorAviao{
+        - String tipo
+        - double combustivelPerHour
+        - boolean on
+        - double velocidade
+        - double combustivel
+        + MotorAviao(tipo: String, combustivelPerHour: double)
+        + acelerar(v: int) void
     }
 ```

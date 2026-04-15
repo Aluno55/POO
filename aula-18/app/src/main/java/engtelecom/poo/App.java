@@ -27,8 +27,7 @@ public class App {
         l.adicionarCapitulo("The Tale of Old");
         l.adicionarCapitulo("Field of Roses & Gold");
 
-        // exemplo de dependencia
-        
+      
 
 
 
