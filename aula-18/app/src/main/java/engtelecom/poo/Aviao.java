@@ -8,8 +8,6 @@ public class Aviao {
     private double pesoMax;
     private double combustivelMax;
     private int numMotores;
-    private MotorAviao propulsor;
-    private String tipoMotor;
     private ArrayList<MotorAviao> motores = new ArrayList<>();
     
     public boolean possivelDecolar(double peso, double combustible, int tripulante, int passageiro){
@@ -26,7 +24,6 @@ public class Aviao {
         this.tripulanteMax = tripulanteMax;
         this.passageiroMax = passageiroMax;
         this.pesoMax = pesoMax;
-        this.tipoMotor = tipoMotor;
         this.combustivelMax = combustivelMax;
         for (int i = 0; i < numMotores; i++) {
           motores.add(new MotorAviao(tipoMotor, gastoPorHora));  
@@ -38,14 +35,19 @@ public class Aviao {
         + "\n Combustivel Maximo: " + combustivelMax + "\n Tem " + numMotores + " motores";
     }
 
-    public void ligarMotor(int option, int v, int h){
-        motores.get(option).acelerar(v, h);
+    public void ligarMotor(int option){
+        motores.get(option).ligarDesligar();;
     }
 
-    // public void ligarMotor(int v, int h){
-        // usar um for?
-    //     motores.get(option).acelerar(v, h);
-    // }
+    public void ligarMotor(){
+        for (int i = 0; i < numMotores; i++) {
+            motores.get(i).ligarDesligar();
+        }
+    }
 
-    public void acelerar(int v){}
+    public void acelerar(int v, int h){
+        for (int i = 0; i < numMotores; i++) {
+            motores.get(i).acelerar(v, h);
+        }
+    }
 }
