@@ -12,10 +12,15 @@ public class MotorAviao {
         this.combustivelPerHour = combustivelPerHour;
     }
 
-    public void acelerar(int v){
+    public double acelerar(int v, int h){
         this.velocidade += v;
-        combustivel -= combustivelPerHour;
+        return combustivel - combustivelPerHour - h;
     }
 
     public void ligarDesligar(){this.on=!on;}
+
+    @Override
+    public String toString() {
+        return "Motor do Aviao de tipo " + type + ", gasta " + combustivelPerHour + " de combustivel por hora e atualmente está numa velocidade de" + velocidade;
+    }
 }

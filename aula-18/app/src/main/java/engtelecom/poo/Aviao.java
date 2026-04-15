@@ -21,19 +21,31 @@ public class Aviao {
         return (variaveis == 4);
     }
 
-    public Aviao(double combustivelMax, int numMotores, MotorAviao propulsor, String tipoMotor) {
+    public Aviao(double combustivelMax, int numMotores, String tipoMotor, int gastoPorHora, int tripulanteMax, int passageiroMax, double pesoMax) {
         this.numMotores = numMotores;
-        this.propulsor = propulsor;
+        this.tripulanteMax = tripulanteMax;
+        this.passageiroMax = passageiroMax;
+        this.pesoMax = pesoMax;
         this.tipoMotor = tipoMotor;
-        
-        motores.add(propulsor);
-        
         this.combustivelMax = combustivelMax;
+        for (int i = 0; i < numMotores; i++) {
+          motores.add(new MotorAviao(tipoMotor, gastoPorHora));  
+        }     
+    }
+    @Override
+    public String toString() {
+        return "Avião\n Maximo de Tripulantes: " + tripulanteMax + "\n Maximo de Passageiros: " + passageiroMax + "\n Peso Maximo: " + pesoMax
+        + "\n Combustivel Maximo: " + combustivelMax + "\n Tem " + numMotores + " motores";
     }
 
-    public void acelerar(int v){
-
-
+    public void ligarMotor(int option, int v, int h){
+        motores.get(option).acelerar(v, h);
     }
-    
+
+    // public void ligarMotor(int v, int h){
+        // usar um for?
+    //     motores.get(option).acelerar(v, h);
+    // }
+
+    public void acelerar(int v){}
 }
