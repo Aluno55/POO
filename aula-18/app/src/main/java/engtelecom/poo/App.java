@@ -9,7 +9,15 @@ public class App {
 // Classe | -Atributos | +Métodos
 //
 // utilizar mermaid.ai/live ou draw.io
-// 
+
+        // exemplo de agregação o--
+        // se carro for destruido, o motor ainda existe
+        Motor m = new Motor(1, 0, 6);
+        Carro c = new Carro("algo", m);
+
+        // exemplo de composição *--
+        // se livro for destruido, todos os capitulos serão juntos
+        
         Pessoa p = new Pessoa("The Author");
         Livro l = new Livro("The Tale", p);
         l.adicionarCapitulo("Void");
@@ -18,6 +26,12 @@ public class App {
         l.adicionarCapitulo("It's Show Time");
         l.adicionarCapitulo("The Tale of Old");
         l.adicionarCapitulo("Field of Roses & Gold");
+
+        // exemplo de dependencia
+        
+
+
+
         IO.println("Fim");
     }
 }

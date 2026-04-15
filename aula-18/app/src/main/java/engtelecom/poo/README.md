@@ -30,5 +30,20 @@ classDiagram
         - material: String
     }
 
-    livro *-- capitulo
+    Livro *-- Capitulo
+    Livro o-- Pessoa
+    class Livro{
+        - titulo: String
+        - autor: Pessoa
+        - capitulo: Capitulo
+        +Livro()
+        +adicionarCaptiulo(c: String) void
+    }
+    class Pessoa {
+        - nome: String
+    }
+    class Capitulo{
+        - titulo: String
+        +Capitulo()
+    }
 ```
