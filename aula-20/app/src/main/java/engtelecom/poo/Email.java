@@ -3,16 +3,16 @@ import java.util.HashMap;
 
 public class Email {
     private HashMap<String, String> dados;
-
-    public Email(String email, String rotulo) {
-        String eR = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
-        if (email.matches(eR)){
-            add(email, rotulo);
-        }
+    
+    public Email(HashMap<String, String> dados) {
+        this.dados = dados;
     }
 
     public boolean add (String valor, String rotulo){
-        dados.put(rotulo, valor);
+        String eR = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+        if (valor.matches(eR)){
+            dados.put(rotulo, valor);
+        }
         return false;
     }
     
