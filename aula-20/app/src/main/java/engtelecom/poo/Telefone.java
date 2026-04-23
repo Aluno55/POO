@@ -1,11 +1,10 @@
 package engtelecom.poo;
 import java.util.HashMap;
 
-import javax.swing.text.MaskFormatter;
+// import javax.swing.text.MaskFormatter;
 
 public class Telefone {
     private HashMap<String, String> dados;
-    // MaskFormatter mask = new MaskFormatter("(##) #####-####");
 
     @Override
     public String toString() {
