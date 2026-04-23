@@ -8,13 +8,12 @@ public class Contato {
     private Telefone phone;
     private Email mail;
 
-    
-
     public Contato(String nome, String sobrenome, LocalDate nascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.nascimento = nascimento;
     }
+
     public boolean addTelefone(String rot, String valor){return phone.add(valor, rot);}
     public boolean addEmail (String rot, String valor){return mail.add(valor, rot);}
     public boolean removeTelefone (String rotulo){return phone.remove(rotulo);}
