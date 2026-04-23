@@ -13,4 +13,28 @@ public class Agenda {
         accounts.get(indiceNaLista);
         return true;
     }
+    public boolean addTelefone(String rotulo, String valor, int indice){
+        accounts.get(indice).addTelefone(rotulo, valor);
+        return true;
+    }
+    public boolean addEmail(String rotulo, String valor, int indice){
+        accounts.get(indice).addEmail(rotulo, valor);
+        return true;
+    }
+    public boolean updateTelefone(String rotulo, String valor, int indice){
+        accounts.get(indice).updateTelefone(valor, rotulo);
+        return true;
+    }
+    public boolean updateEmail(String rotulo, String valor, int indice){
+        accounts.get(indice).updateEmail(valor, rotulo);
+        return true;
+    }
+    public boolean removeTelefone(String rotulo, int indice){
+        accounts.get(indice).removeTelefone(rotulo);
+        return true;
+    }
+    public boolean removeEmail(String rotulo, int indice){
+        accounts.get(indice).removeEmail(rotulo);
+        return true;
+    }
 }

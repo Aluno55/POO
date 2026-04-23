@@ -13,7 +13,8 @@ public class Contato {
         this.sobrenome = sobrenome;
         this.nascimento = nascimento;
     }
-
+    public Email getMail() {return mail;}
+    public Telefone getPhone() {return phone;}
     public boolean addTelefone(String rot, String valor){return phone.add(valor, rot);}
     public boolean addEmail (String rot, String valor){return mail.add(valor, rot);}
     public boolean removeTelefone (String rotulo){return phone.remove(rotulo);}
