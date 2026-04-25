@@ -20,22 +20,27 @@ public class App {
                     agenda.removeContato(num);
                 break;
                 case 3:
-                    int email = Integer.parseInt(IO.readln("1-Adicionar Email\n2-Remover Email\n3-Atualizar Email"));
-                    // switch (email) {
-                    //     case 1:
-                            
-                    //     break;
-                    //     case 2:
+                    int emailInt = Integer.parseInt(IO.readln("Qual o numero dele na lista?"));
+                    int emailOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Email\n2-Remover Email\n3-Atualizar Email"));
+                    switch (emailOption) {
+                        case 1:
+                            // String k;
+                            // String v;
+                            // agenda.addEmail(k, v, emailInt);
+                        break;
+                        case 2:
 
-                    //     break;
+                        break;
+                        case 3:
+
+                        break;
                     //     default:
                     //         IO.println("Opção invalida");
                     //     break;
-                    // }
+                    }
                     break;
                 case 4:
-                    int phone = Integer.parseInt(IO.readln("1-Adicionar Telefone\n2-Remover Telefone\n3-Atualizar Telefone"));
-                
+                    // int phone = Integer.parseInt(IO.readln("1-Adicionar Telefone\n2-Remover Telefone\n3-Atualizar Telefone"));
                     break;
                 default:
                     IO.println("Opção invalida");

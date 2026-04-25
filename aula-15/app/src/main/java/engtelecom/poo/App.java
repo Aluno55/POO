@@ -72,7 +72,7 @@ public class App {
         l.forEach(e -> {
             if (e.equals("Maria"))
             {System.out.println(e);}
-        }); // LAMBDA! EU LEMBRO DE VC DESGRAÇA! (x, fx)
+        });
         l.remove("Maria");
         l.removeIf(e -> e.equals("Jorge"));
         System.out.println(l);

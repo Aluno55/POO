@@ -5,6 +5,15 @@ import java.util.ArrayList;
 public class Agenda {
     private ArrayList<Contato> accounts;
 
+    public ArrayList<Contato> findContato(String nome, String sobrenome){
+        ArrayList<Contato> novo = new ArrayList<>();
+        accounts.forEach(e -> {
+            if (e.getNome().equalsIgnoreCase(nome) && e.getSobrenome().equalsIgnoreCase(sobrenome)) {
+                novo.add(e);
+            }
+        });
+        return novo;
+    }
     public boolean addContato (Contato c){
         accounts.add(c);
         return true;
