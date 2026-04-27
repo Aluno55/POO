@@ -6,24 +6,28 @@ public class App {
     public void menu(){
         int option = 1;
         do {
-            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n0-Sair\n1-Adicionar Contato\n2-Remover Contato\n3-Configurar Emails\n4-Configurar Telefones"));
+            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n0-Sair\n1-Adicionar Contato\n2-Remover Contato\n3-Configurar Emails\n4-Configurar Telefones "));
             switch (option) {
                 case 1:
-                    var name = IO.readln("Qual sobrenome?");
-                    var surname = IO.readln("Qual nome?");
-                    LocalDate date = LocalDate.parse(IO.readln("Qual nome?"));
+                    var surname = IO.readln("Qual nome? ");
+                    var name = IO.readln("Qual sobrenome? ");     
+                    LocalDate date = LocalDate.parse(IO.readln("Qual a data de nascimento? "));
                     Contato conta = new Contato(surname, name, date);
                     agenda.addContato(conta);
                 break;
                 case 2:
-                    int num = Integer.parseInt(IO.readln("Qual a posição do contato?"));
-                    agenda.removeContato(num);
+                    String nome = IO.readln("Qual o nome?");
+                    String sobrenome = IO.readln("Qual o sobrenome?");
+                    int num = agenda.findContato(nome, sobrenome).indexOf(agenda);
+                    if (agenda.removeContato(num)){System.out.println("Contato removido");};
                 break;
                 case 3:
                     int emailOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Email\n2-Remover Email\n3-Atualizar Email"));
-                    String nome = IO.readln("Qual o nome?");
-                    String sobrenome = IO.readln("Qual o sobrenome?");
-                    agenda.findContato(nome, sobrenome);
+                    String nomeEmail = IO.readln("Qual o nome?");
+                    String sobrenomeEmail = IO.readln("Qual o sobrenome?");
+                    int emailInt = agenda.findContato(nomeEmail, sobrenomeEmail).indexOf(agenda);
+                    String valor = IO.readln("Email?");
+                    String rotulo = IO.readln("Rotulo?");
                     switch (emailOption) {
                         case 1:
                             agenda.addEmail(rotulo, valor, emailInt);
@@ -40,7 +44,26 @@ public class App {
                     }
                     break;
                 case 4:
-                    // int phone = Integer.parseInt(IO.readln("1-Adicionar Telefone\n2-Remover Telefone\n3-Atualizar Telefone"));
+                    int phoneOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Telefone\n2-Remover Telefone\n3-Atualizar Telefone"));
+                    String nomeTelefone = IO.readln("Qual o nome?");
+                    String sobrenomeTelefone = IO.readln("Qual o sobrenome?");
+                    int phoneInt = agenda.findContato(nomeTelefone, sobrenomeTelefone).indexOf(agenda);
+                    String valorTelefone = IO.readln("Email?");
+                    String rotuloTelefone = IO.readln("Rotulo?");
+                    switch (phoneOption) {
+                        case 1:
+                            agenda.addEmail(rotuloTelefone, valorTelefone, phoneInt);
+                        break;
+                        case 2:
+                            agenda.removeEmail(rotuloTelefone, phoneInt);
+                        break;
+                        case 3:
+                            agenda.updateEmail(rotuloTelefone, valorTelefone, phoneInt);
+                        break;
+                        default:
+                            IO.println("Opção invalida");
+                        break;
+                    }
                     break;
                 default:
                     IO.println("Opção invalida");
@@ -51,7 +74,5 @@ public class App {
     public static void main(String[] args) {
         App menu = new App();
         menu.menu();
-        //tem entidades, atributos e relacionamentos
-        //associação, exemplo: alunos usam matriculas que usa cursos
     }
 }
