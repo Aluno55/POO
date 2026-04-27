@@ -6,26 +6,28 @@ public class App {
     public void menu(){
         int option = 1;
         do {
-            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n0-Sair\n1-Adicionar Contato\n2-Remover Contato\n3-Configurar Emails\n4-Configurar Telefones "));
+            option = Integer.parseInt(IO.readln("Escolha uma das opções:\n0-Sair\n1-Criar Contato\n2-Remover Contato\n3-Configurar Emails\n4-Configurar Telefones "));
             switch (option) {
                 case 1:
                     var surname = IO.readln("Qual nome? ");
                     var name = IO.readln("Qual sobrenome? ");     
-                    LocalDate date = LocalDate.parse(IO.readln("Qual a data de nascimento? "));
+                    LocalDate date = LocalDate.parse(IO.readln("Qual a data de nascimento (YYYY-MM-DD)? "));
                     Contato conta = new Contato(surname, name, date);
                     agenda.addContato(conta);
                 break;
                 case 2:
                     String nome = IO.readln("Qual o nome?");
                     String sobrenome = IO.readln("Qual o sobrenome?");
-                    int num = agenda.findContato(nome, sobrenome).indexOf(agenda);
+
+                    int num = 1;
+                    //agenda.getAccounts().indexOf(agenda.findContato(nome, sobrenome).getFirst());
                     if (agenda.removeContato(num)){System.out.println("Contato removido");};
                 break;
                 case 3:
                     int emailOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Email\n2-Remover Email\n3-Atualizar Email"));
-                    String nomeEmail = IO.readln("Qual o nome?");
-                    String sobrenomeEmail = IO.readln("Qual o sobrenome?");
-                    int emailInt = agenda.findContato(nomeEmail, sobrenomeEmail).indexOf(agenda);
+                    // String nomeEmail = IO.readln("Qual o nome?");
+                    // String sobrenomeEmail = IO.readln("Qual o sobrenome?");
+                    int emailInt = Integer.parseInt(IO.readln("Posição dele na lista: "));
                     String valor = IO.readln("Email?");
                     String rotulo = IO.readln("Rotulo?");
                     switch (emailOption) {
@@ -45,9 +47,9 @@ public class App {
                     break;
                 case 4:
                     int phoneOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Telefone\n2-Remover Telefone\n3-Atualizar Telefone"));
-                    String nomeTelefone = IO.readln("Qual o nome?");
-                    String sobrenomeTelefone = IO.readln("Qual o sobrenome?");
-                    int phoneInt = agenda.findContato(nomeTelefone, sobrenomeTelefone).indexOf(agenda);
+                    // String nomeTelefone = IO.readln("Qual o nome?");
+                    // String sobrenomeTelefone = IO.readln("Qual o sobrenome?");
+                    int phoneInt = Integer.parseInt(IO.readln("Posição dele na lista: "));
                     String valorTelefone = IO.readln("Email?");
                     String rotuloTelefone = IO.readln("Rotulo?");
                     switch (phoneOption) {

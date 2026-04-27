@@ -15,6 +15,7 @@ public class Agenda {
         });
         return novo;
     }
+    public ArrayList<Contato> getAccounts() {return accounts;}
 
     public boolean addContato (Contato c){
         for (int i = 0; i < accounts.size(); i++) {
