@@ -7,6 +7,7 @@ import javax.swing.text.MaskFormatter;
 public class Telefone {
     private HashMap<String, String> dados;
     private MaskFormatter mask = null;
+    public Telefone() {this.dados = new HashMap<>();}
 
     @Override
     public String toString() {

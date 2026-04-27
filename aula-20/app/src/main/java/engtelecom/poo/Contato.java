@@ -12,6 +12,8 @@ public class Contato {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.nascimento = nascimento;
+        this.phone = new Telefone();
+        this.mail = new Email();
     }
     public String getNome() {return nome;}
     public String getSobrenome() {return sobrenome;}
@@ -23,4 +25,5 @@ public class Contato {
     public boolean removeEmail (String rotulo){return mail.remove(rotulo);}
     public boolean updateTelefone (String valor, String rotulo){return phone.update(valor, rotulo);}
     public boolean updateEmail (String valor, String rotulo){return mail.update(valor, rotulo);}
+    public String toStringTelefone(){return phone.toString();}
 }

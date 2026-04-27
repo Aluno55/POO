@@ -4,14 +4,13 @@ import java.util.HashMap;
 public class Email {
     private HashMap<String, String> dados;
     
-    public Email(HashMap<String, String> dados) {
-        this.dados = dados;
-    }
+    public Email() {this.dados = new HashMap<>();}
 
     public boolean add (String valor, String rotulo){
         String eR = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
         if (valor.matches(eR)){
             dados.put(rotulo, valor);
+            return true;
         }
         return false;
     }

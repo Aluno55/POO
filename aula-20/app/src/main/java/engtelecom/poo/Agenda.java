@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Agenda {
     private ArrayList<Contato> accounts;
+    public Agenda() {this.accounts = new ArrayList<>();}
 
     public ArrayList<Contato> findContato(String nome, String sobrenome){
         ArrayList<Contato> novo = new ArrayList<>();
@@ -14,36 +15,67 @@ public class Agenda {
         });
         return novo;
     }
+
     public boolean addContato (Contato c){
-        accounts.add(c);
-        return true;
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).equals(c)) {
+                return accounts.add(c);
+            }
+        }
+        return false;
     }
     public boolean removeContato (int indiceNaLista){
-        accounts.get(indiceNaLista);
+        if (accounts.get(indiceNaLista) == null) {
+            return false;
+        }
+        accounts.remove(indiceNaLista);        
         return true;
     }
     public boolean addTelefone(String rotulo, String valor, int indice){
-        accounts.get(indice).addTelefone(rotulo, valor);
-        return true;
+        Telefone t = new Telefone();
+        t.add(valor, rotulo);
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(indice).getPhone() == t) {
+                return addTelefone(rotulo, valor, indice);
+            }
+        }
+        return false;
     }
     public boolean addEmail(String rotulo, String valor, int indice){
-        accounts.get(indice).addEmail(rotulo, valor);
-        return true;
+        Email t = new Email();
+        t.add(valor, rotulo);
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(indice).getMail() == t) {
+                return addEmail(rotulo, valor, indice);
+            }
+        }
+        return false;
     }
     public boolean updateTelefone(String rotulo, String valor, int indice){
-        accounts.get(indice).updateTelefone(valor, rotulo);
-        return true;
+        Telefone t = new Telefone();
+        t.add(valor, rotulo);
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(indice).getPhone() == t) {
+                return updateTelefone(rotulo, valor, indice);
+
+            }
+        }
+        return false;
     }
     public boolean updateEmail(String rotulo, String valor, int indice){
-        accounts.get(indice).updateEmail(valor, rotulo);
-        return true;
+        Email t = new Email();
+        t.add(valor, rotulo);
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(indice).getMail() == t) {
+                return updateEmail(rotulo, valor, indice);
+            }
+        }
+        return false;
     }
     public boolean removeTelefone(String rotulo, int indice){
-        accounts.get(indice).removeTelefone(rotulo);
-        return true;
+        return accounts.get(indice).removeTelefone(rotulo);
     }
     public boolean removeEmail(String rotulo, int indice){
-        accounts.get(indice).removeEmail(rotulo);
-        return true;
+        return accounts.get(indice).removeEmail(rotulo);
     }
 }
