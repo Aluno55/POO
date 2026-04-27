@@ -15,7 +15,16 @@ public class Agenda {
         });
         return novo;
     }
-    public ArrayList<Contato> getAccounts() {return accounts;}
+    
+    public int position (String nome, String sobrenome){
+        for (int i = 0; i < accounts.size(); i++) {
+            var c = accounts.get(i);
+            if (c.getNome().equalsIgnoreCase(nome) && c.getSobrenome().equalsIgnoreCase(sobrenome)) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     public boolean addContato (Contato c){
         for (int i = 0; i < accounts.size(); i++) {

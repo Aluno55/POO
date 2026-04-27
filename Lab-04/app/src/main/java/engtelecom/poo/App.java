@@ -19,14 +19,13 @@ public class App {
                     String nome = IO.readln("Qual o nome?");
                     String sobrenome = IO.readln("Qual o sobrenome?");
 
-                    int num = 1;
-                    //agenda.getAccounts().indexOf(agenda.findContato(nome, sobrenome).getFirst());
+                    int num = agenda.position(nome, sobrenome);
                     if (agenda.removeContato(num)){System.out.println("Contato removido");};
                 break;
                 case 3:
                     int emailOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Email\n2-Remover Email\n3-Atualizar Email"));
-                    // String nomeEmail = IO.readln("Qual o nome?");
-                    // String sobrenomeEmail = IO.readln("Qual o sobrenome?");
+                    String nomeEmail = IO.readln("Qual o nome?");
+                    String sobrenomeEmail = IO.readln("Qual o sobrenome?");
                     int emailInt = Integer.parseInt(IO.readln("Posição dele na lista: "));
                     String valor = IO.readln("Email?");
                     String rotulo = IO.readln("Rotulo?");
@@ -35,7 +34,8 @@ public class App {
                             agenda.addEmail(rotulo, valor, emailInt);
                         break;
                         case 2:
-                            agenda.removeEmail(rotulo, emailInt);
+                            int numEmail = agenda.position(nomeEmail, sobrenomeEmail);
+                            if (agenda.removeContato(numEmail)){System.out.println("Contato removido");};
                         break;
                         case 3:
                             agenda.updateEmail(rotulo, valor, emailInt);
@@ -47,8 +47,8 @@ public class App {
                     break;
                 case 4:
                     int phoneOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Telefone\n2-Remover Telefone\n3-Atualizar Telefone"));
-                    // String nomeTelefone = IO.readln("Qual o nome?");
-                    // String sobrenomeTelefone = IO.readln("Qual o sobrenome?");
+                    String nomeTelefone = IO.readln("Qual o nome?");
+                    String sobrenomeTelefone = IO.readln("Qual o sobrenome?");
                     int phoneInt = Integer.parseInt(IO.readln("Posição dele na lista: "));
                     String valorTelefone = IO.readln("Email?");
                     String rotuloTelefone = IO.readln("Rotulo?");
@@ -57,7 +57,8 @@ public class App {
                             agenda.addEmail(rotuloTelefone, valorTelefone, phoneInt);
                         break;
                         case 2:
-                            agenda.removeEmail(rotuloTelefone, phoneInt);
+                            int numTelefone = agenda.position(nomeTelefone, sobrenomeTelefone);
+                            if (agenda.removeContato(numTelefone)){System.out.println("Contato removido");};
                         break;
                         case 3:
                             agenda.updateEmail(rotuloTelefone, valorTelefone, phoneInt);
