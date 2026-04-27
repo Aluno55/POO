@@ -72,10 +72,6 @@ public class Agenda {
         }
         return false;
     }
-    public boolean removeTelefone(String rotulo, int indice){
-        return accounts.get(indice).removeTelefone(rotulo);
-    }
-    public boolean removeEmail(String rotulo, int indice){
-        return accounts.get(indice).removeEmail(rotulo);
-    }
+    public boolean removeTelefone(String rotulo, int indice){return accounts.get(indice).removeTelefone(rotulo);}
+    public boolean removeEmail(String rotulo, int indice){return accounts.get(indice).removeEmail(rotulo);}
 }

@@ -2,9 +2,9 @@ package engtelecom.poo;
 import java.time.LocalDate;
 
 public class App {
+    Agenda agenda = new Agenda();
     public void menu(){
         int option = 1;
-        Agenda agenda = new Agenda();
         do {
             option = Integer.parseInt(IO.readln("Escolha uma das opções:\n0-Sair\n1-Adicionar Contato\n2-Remover Contato\n3-Configurar Emails\n4-Configurar Telefones"));
             switch (option) {
@@ -20,23 +20,23 @@ public class App {
                     agenda.removeContato(num);
                 break;
                 case 3:
-                    int emailInt = Integer.parseInt(IO.readln("Qual o numero dele na lista?"));
                     int emailOption = Integer.parseInt(IO.readln("O que gostaria de fazer?:\n1-Adicionar Email\n2-Remover Email\n3-Atualizar Email"));
+                    String nome = IO.readln("Qual o nome?");
+                    String sobrenome = IO.readln("Qual o sobrenome?");
+                    agenda.findContato(nome, sobrenome);
                     switch (emailOption) {
                         case 1:
-                            // String k;
-                            // String v;
-                            // agenda.addEmail(k, v, emailInt);
+                            agenda.addEmail(rotulo, valor, emailInt);
                         break;
                         case 2:
-
+                            agenda.removeEmail(rotulo, emailInt);
                         break;
                         case 3:
-
+                            agenda.updateEmail(rotulo, valor, emailInt);
                         break;
-                    //     default:
-                    //         IO.println("Opção invalida");
-                    //     break;
+                        default:
+                            IO.println("Opção invalida");
+                        break;
                     }
                     break;
                 case 4:

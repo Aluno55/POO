@@ -24,7 +24,10 @@ public class Telefone {
     }
 
     public boolean add (String valor, String rotulo){
-        dados.put(rotulo, valor);
+        if (!dados.containsKey(rotulo)) {
+            dados.put(rotulo, valor);
+            return true;
+        }
         return false;
     }
     

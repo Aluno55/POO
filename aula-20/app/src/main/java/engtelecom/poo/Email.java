@@ -8,7 +8,7 @@ public class Email {
 
     public boolean add (String valor, String rotulo){
         String eR = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
-        if (valor.matches(eR)){
+        if (valor.matches(eR) && !dados.containsKey(rotulo)){
             dados.put(rotulo, valor);
             return true;
         }
