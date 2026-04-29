@@ -40,3 +40,4 @@ Objeto é semelhante a DNA? Dita como é (atributos, caracteristicas), o que faz
 5- Polimorfismo
 -->
 - [Aula 16 & 17](./aula-16/) - Collections & Streams
+- [Aula 18 ~ 20](./aula-18/) - Mermaid
