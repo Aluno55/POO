@@ -1,18 +1,32 @@
-Motorista pode dirigir um ou mais veículos. A empresa registra o uso de cada veículo, incluindo a data, o motorista e a distância percorrida.
-
 ```mermaid
 classDiagram
+    Empresa *-- Registro
+    Veiculo --o Empresa
+    Motorista --o Empresa
     class Empresa{
         - ArrayList ~Veiculo~ frota
         - ArrayList ~Motorista~ motorista
         + Empresa ()
+        - ArrayList ~Registro~ registro
+        + registrar (distancia: double, movel: Veiculo, responsavel: Motorista, diaUsado: LocalDate)
+    }
+    class Registro{
+        - double distancia
+        - Veiculo movel
+        - Motorista responsavel
+        - LocalDate diaUsado
+        + Registro (distancia: double, movel: Veiculo, responsavel: Motorista, diaUsado: LocalDate)
     }
     class Veiculo{
         - String model
         - String placa
         - int ano
+        + Veiculo (ano: int, place: String, model: String)
     }
     class Motorista{
-        
+        - String nome
+        - ArrayList ~Veiculo~ movel
+        + Motorista (nome: String)
+        + dirigir (movel: Veiculo) boolean
     }
 ```
