@@ -2,27 +2,27 @@
 classDiagram
     class Filme{
         - String titulo
-        - lançamento
-        - genero
-        - diretor
-        - atores list
-        - avaliações list
+        - LocalDate lançamento
+        - String genero
+        - String diretor
+        - ArrayList <Ator> atores
+        - ArrayList<Avaliacao> avaliacoes
     }
     class Ator{
-        - nome
-        - nascimento
+        - String nome
+        - LocalDate nascimento
     }
     class Avaliacao{
-        - comentario
-        - nota
+        - String comentario
+        - int nota
     }
     Ator "1..*"--o"1" Filme
     Avaliacao "1..*"--*"1" Filme
-    Avaliacao "1"--o"1" Usuario
+    Avaliacao "1"o--"1" Usuario
     class Usuario{
-        - nome
-        - email
-        - senha
-        +avaliar()
+        - String nome
+        - String email
+        - String senha
+        + avaliar(nota: int) void
     }
 ```
