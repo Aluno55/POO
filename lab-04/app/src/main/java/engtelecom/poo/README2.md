@@ -2,30 +2,34 @@
 classDiagram
     class Filme{
         - String titulo
-        - LocalDate lancamento
+        - LocalDate launch
         - String genero
         - String diretor
-        - ArrayList <Ator> atores
-        - ArrayList <Avaliacao> avaliacoes
+        - ArrayList ~Ator~ atores
+        - ArrayList ~Avaliacao~ avaliacoes
+        + Filme(titulo: String, launch: LocalDate, genero: String, diretor: String)
+        + addAvaliar(nota: int, comment: String) void
+        + editAvaliar(nota: int, comment: String) void
     }
     class Ator{
         - String nome
-        - LocalDate nascimento
+        - LocalDate birthday
+        + Ator (nome: String, birthday: LocalDate)
     }
     class Avaliacao{
-        - String comentario
+        - String comment
         - int nota
-
+        + Avaliacao (comment: String, nota: int)
     }
-    Ator "1..*"--o"1" Filme
-    Avaliacao "1..*"--*"1" Filme
-    Avaliacao "1"o--"1" Usuario
+    Ator "1..*" --o "0..*" Filme
+    Avaliacao "0..*" --* "1" Filme
+    Avaliacao "0..*" o-- "1" Usuario
+
     class Usuario{
         - String nome
         - String email
         - String senha
-        + avaliar(nota: int, commentary: String) void
+        - ArrayList ~Avaliacao~
+        + avaliar(nota: int, comment: String) void
     }
 ```
-
-Um ator tem um nome e uma data de nascimento. Um filme pode ter uma ou mais avaliações, e cada avaliação está associada a um único filme e a um único usuário. Um usuário tem um nome, um e-mail e uma senha. Um usuário pode avaliar um ou mais filmes.
