@@ -2,9 +2,9 @@ Uma empresa possui uma frota de veículos. Cada veículo tem um modelo, uma plac
 
 ```mermaid
 classDiagram
-    Empresa *-- Registro
-    Veiculo --o Empresa
-    Motorista --o Empresa
+    Empresa "1"*--"1..*" Registro
+    Veiculo "1..*"--o"1" Empresa
+    Motorista "1..*"--o"1" Empresa
     class Empresa{
         - ArrayList ~Veiculo~ frota
         - ArrayList ~Motorista~ motorista
