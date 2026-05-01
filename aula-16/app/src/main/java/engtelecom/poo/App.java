@@ -1,4 +1,5 @@
 package engtelecom.poo;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class App {
@@ -64,11 +65,13 @@ public class App {
     public static void main(String[] args) {
     App app = new App();
     app.livraria();
-        // hashmap.forEach((v1, v2) - > {function;})
+    // HashMap <String, String> a = new HashMap<>();
+    // ArrayList <String> b = new ArrayList<>();
+    
+        // hashmap.forEach(k, v) - > {function;})
         // collection.forEach(variable -> {function})
-        // collection.forEach(classe::SingleFunction)
+            // collection.forEach(classe::SingleFunction)
         // for (classe var : collection) {function;}
-        // for (Map.Entry<classe, classe> valor : collection()){function;}
-        // hashmap is like a collection of collections, meanwhile a collection is like a FIFO, FILO, List, etc...
+            // for (Map.Entry<classe, classe> valor : collection()){function;}
     }
 }
