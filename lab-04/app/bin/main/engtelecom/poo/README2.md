@@ -11,7 +11,7 @@ classDiagram
         - ArrayList ~Avaliacao~ avaliacoes
         + Filme(titulo: String, launch: LocalDate, genero: String, diretor: String)
         + addAvaliar(nota: int, comment: String) void
-        + editAvaliar(nota: int, comment: String) void
+        + MediarAvaliacoes () void
     }
     class Ator{
         - String nome
@@ -20,11 +20,13 @@ classDiagram
     }
     class Avaliacao{
         - String comment
+        - Filme movie
         - int nota
-        + Avaliacao (comment: String, nota: int)
+        - Usuario user
+        + Avaliacao (movie: Filme, comment: String, nota: int)
     }
     Ator "1..*" --o "0..*" Filme
-    Avaliacao "0..*" --* "1" Filme
+    Avaliacao "0..*" o--* "1" Filme
     Avaliacao "0..*" o-- "1" Usuario
 
     class Usuario{

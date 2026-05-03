@@ -4,13 +4,8 @@ Uma companhia aérea oferece voos para diversos destinos. Cada voo tem um númer
 
 ```mermaid
 classDiagram
-    class Companhia{
-        + Companhia ()
-        + Voar ()
-    }
-    Companhia "1"*--"1..*" Voo
-    Voo o--"*" Passageiro
-    Reserva --* Passageiro
+    Voo --o Reserva
+    Reserva o-- Passageiro
     class Voo{
         - LocalDate data
         - double horaPartida
