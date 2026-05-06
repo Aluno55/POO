@@ -5,11 +5,12 @@ classDiagram
         - ArrayList ~Display~ dHora
         - ArrayList ~Display~ dMinuto
         - ArrayList ~Display~ dSegundo
+        + onSwitch () boolean
     }
     class Display{
         + Display ()
         - ArrayList ~Segmento~ segs
-        + seteSegmentos () boolean
+        + onSwitch () boolean
     }
     class Segmento{
         - Draw seg
@@ -20,3 +21,12 @@ classDiagram
     Display "6"--*"1" Relogio
     Segmento "7"--*"1" Display
 ```
+-a-
+
+f-b
+
+-g-
+
+e-c
+
+-d-
