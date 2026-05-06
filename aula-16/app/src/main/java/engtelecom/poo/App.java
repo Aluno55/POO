@@ -65,10 +65,11 @@ public class App {
     public static void main(String[] args) {
     App app = new App();
     app.livraria();
-    // HashMap <String, String> a = new HashMap<>();
-    // ArrayList <String> b = new ArrayList<>();
-    
-        // hashmap.forEach(k, v) - > {function;})
+    HashMap <String, String> a = new HashMap<>();
+    ArrayList <String> b = new ArrayList<>();
+    a.forEach((k,v)->{});
+    b.forEach((n)->{});
+        // hashmap.forEach((k, v) - > {function;})
         // collection.forEach(variable -> {function})
             // collection.forEach(classe::SingleFunction)
         // for (classe var : collection) {function;}
