@@ -1,8 +1,6 @@
 package engtelecom.poo;
 import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
-import edu.princeton.cs.algs4.Draw;
-// import java.awt.Color;
+
 public class Relogio {
     private ArrayList<Display> dSeg;
     private ArrayList<Display> dMin;

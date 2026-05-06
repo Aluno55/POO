@@ -9,7 +9,8 @@ classDiagram
     class Display{
         + Display ()
         - ArrayList ~Segmento~ segs
-        + seteSegmentos () boolean
+        + segmentoHorizontal () void
+        + segmentoVertical () void
     }
     class Segmento{
         - Draw seg
