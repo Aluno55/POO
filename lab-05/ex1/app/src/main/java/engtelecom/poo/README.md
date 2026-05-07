@@ -11,13 +11,14 @@ classDiagram
     class Display{
         + Display ()
         - ArrayList ~Segmento~ segs
-        - int valor
+        + setSegmento 
     }
     class Segmento{
         - Draw seg
         - boolean onoff
         + Segmento ()
         + onSwitch () boolean
+        + desligar () void
         + segmentoHorizontal () void
         + segmentoVertical () void
     }

@@ -20,6 +20,9 @@ public class Segmento {
         }
         return onoff = !onoff;
     }
+    public void desligar (){
+        onoff = false;
+    }
 
     public void segmentoHorizontal(){
         double x0 = 300;
