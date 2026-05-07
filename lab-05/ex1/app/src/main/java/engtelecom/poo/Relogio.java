@@ -4,14 +4,16 @@ import java.util.concurrent.TimeUnit;
 import edu.princeton.cs.algs4.Draw;
 
 public class Relogio {
-    private ArrayList<Display>  dSeg;
-    private ArrayList<Display> dMin;
-    private ArrayList<Display> dHora;
+    private int segundos;
+    private int minutos;
+    private int horas;
+    private ArrayList<Display> displays; // 6 displays
 
     public Relogio() {
-        dSeg = new ArrayList<>();
-        dMin = new ArrayList<>();
-        dHora = new ArrayList<>();
+        segundos = 0;
+        minutos = 0;
+        horas = 0;
+        displays = new ArrayList<>();
     }
 
     public void counter(int val) throws InterruptedException{
@@ -30,13 +32,14 @@ public class Relogio {
         for (int i = 0; i < 3600; i++) {
             art.clear();
             for (int j = 0; j < 60; j++) {
+
                 for (int j2 = 0; j2 < 60; j2++) {
-                    art.text(3*val,3*val,""+i);
+                    segundos++;
                     TimeUnit.SECONDS.sleep(1);
                 }
-                art.text(3*val,3*val,""+i);
+                minutos++;
             }
-            art.text(3*val,3*val,""+i);
+            horas++;
             art.show();
         }
     }

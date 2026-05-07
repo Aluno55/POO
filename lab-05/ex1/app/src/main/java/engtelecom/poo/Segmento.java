@@ -3,20 +3,16 @@ import edu.princeton.cs.algs4.Draw;
 import java.awt.Color;
 
 public class Segmento {
-    private Draw seg;
+    private String nome;
+    private Draw seg = new Draw();
     private boolean onoff = false;
 
     public Segmento(boolean onoff, String direction) {
         this.onoff = onoff;
-        if (direction.equalsIgnoreCase("vertical")){
-            seg = new Draw();
-            segmentoVertical();
-        }
-        else {
-            seg = new Draw();
-            segmentoHorizontal();
-        }
+
     }
+    //colocar os segmentos no canvas
+
     public boolean onSwitch (){
         if (onoff){
         seg.setPenColor(Color.red);
@@ -59,3 +55,8 @@ public class Segmento {
         vertical.filledPolygon(xVertical, yVertical);
     }
 }
+
+// for (int i = 0; i < xVertical.length; i++) {
+// xVertical[i]+=fator;
+// }
+// desenho.filledPolygon(xVertical, yVertical);

@@ -3,13 +3,15 @@ classDiagram
     class Relogio{
         + Relogio ()
         + counter (val: int) void 
-        - ArrayList ~Display~ dHora
-        - ArrayList ~Display~ dMinuto
-        - ArrayList ~Display~ dSegundo
+        - int segundos
+        - int minutos
+        - int horas
+        - ArrayList ~Display~ displays
     }
     class Display{
         + Display ()
         - ArrayList ~Segmento~ segs
+        - int valor
     }
     class Segmento{
         - Draw seg
