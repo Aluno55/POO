@@ -12,17 +12,6 @@ public class App {
 
         var val = tam;
         Draw art = new Draw();
-        for (int i = 0; i < 3600; i++) {
-            art.clear();
-            for (int j = 0; j < 60; j++) {
-                for (int j2 = 0; j2 < 60; j2++) {
-                    art.text(3*val,3*val,""+i);
-                    TimeUnit.SECONDS.sleep(1);
-                }
-                art.text(3*val,3*val,""+i);
-            }
-            art.text(3*val,3*val,""+i);
-            art.show();
-        }
+        
     }
 }

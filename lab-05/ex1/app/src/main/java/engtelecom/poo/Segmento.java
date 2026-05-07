@@ -3,13 +3,11 @@ import edu.princeton.cs.algs4.Draw;
 import java.awt.Color;
 
 public class Segmento {
-    private String nome;
     private Draw seg = new Draw();
     private boolean onoff = false;
 
-    public Segmento(boolean onoff, String direction) {
+    public Segmento(boolean onoff) {
         this.onoff = onoff;
-
     }
     //colocar os segmentos no canvas
 

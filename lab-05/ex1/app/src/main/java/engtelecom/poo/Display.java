@@ -1,21 +1,22 @@
 package engtelecom.poo;
-import java.util.ArrayList;
+import java.util.HashMap;
 import edu.princeton.cs.algs4.Draw;
 import java.awt.Color;
 
 public class Display {
-    private ArrayList<Segmento> segs;
+    private HashMap<String, Segmento> segs;
     private int valor;
 
     public Display(){ 
         valor = 0;
-        segs.add(new Segmento(false, "horizontal")); //A top
-        segs.add(new Segmento(false, "vertical")); //B right up
-        segs.add(new Segmento(false, "vertical")); //C right down
-        segs.add(new Segmento(false, "horizontal")); //D bottom
-        segs.add(new Segmento(false, "vertical")); //E left down
-        segs.add(new Segmento(false, "vertical")); //F left up
-        segs.add(new Segmento(false, "horizontal")); //G middle
+        segs.put("A", new Segmento(false));
+        segs.put("B", new Segmento(false));
+        segs.put("C", new Segmento(false));
+        segs.put("D", new Segmento(false));
+        segs.put("E", new Segmento(false));
+        segs.put("F", new Segmento(false));
+        segs.put("G", new Segmento(false));
     }
+
     // posicionar os segmentos no canvas
 }

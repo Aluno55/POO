@@ -32,7 +32,6 @@ public class Relogio {
         for (int i = 0; i < 3600; i++) {
             art.clear();
             for (int j = 0; j < 60; j++) {
-
                 for (int j2 = 0; j2 < 60; j2++) {
                     segundos++;
                     TimeUnit.SECONDS.sleep(1);
