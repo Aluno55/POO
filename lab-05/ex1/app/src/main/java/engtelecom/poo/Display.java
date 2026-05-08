@@ -1,7 +1,5 @@
 package engtelecom.poo;
 import java.util.HashMap;
-import edu.princeton.cs.algs4.Draw;
-import java.awt.Color;
 
 public class Display {
     private HashMap<String, Segmento> segs;

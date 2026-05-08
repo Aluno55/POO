@@ -16,7 +16,8 @@ public class Relogio {
         displays = new ArrayList<>();
     }
 
-    // val é para definir o tamanho do relogio, ver onde coloco depois
+    // val é para definir o tamanho do relogio, não tenho certeza onde coloco
+    // Draw não está mostrando nada por algum motivo
     public void counter(int val) throws InterruptedException{
         Draw art = new Draw();
         art.setXscale(0, 1000);
