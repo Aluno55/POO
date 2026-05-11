@@ -1,8 +1,8 @@
-package engtelecom.poo;
+package engtelecom.poo.produtos;
 
 public class Telefone {
     private int codigo;
-    private String modelo;
+    protected String modelo;
     private String numSerie;
     private double peso;
     private Dimensao dimensao;
@@ -17,7 +17,7 @@ public class Telefone {
 
     @Override
     public String toString() {
-        return "Telefone [codigo=" + codigo + ", modelo=" + modelo + ", numSerie=" + numSerie + ", peso=" + peso
-                + ", dimensao=" + dimensao + "]";
+        return "--Telefone--\n Codigo:" + codigo + "\nModelo:" + modelo + "\nNumero de Serie" + numSerie + "\nPeso:" + peso
+                + "\nDimensoes:" + dimensao;
     }    
 }

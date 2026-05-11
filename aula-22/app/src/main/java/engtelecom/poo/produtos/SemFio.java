@@ -1,4 +1,4 @@
-package engtelecom.poo;
+package engtelecom.poo.produtos;
 
 public class SemFio extends Telefone{
     private double frequencia;
@@ -10,6 +10,11 @@ public class SemFio extends Telefone{
         this.frequencia = f;
         this.canais = canais;
         this.distanciaOperacao = distancia;
+        this.modelo = "a";
     }
-    
+
+    @Override
+    public String toString() {
+        return "--Telefone sem Fio--\n" + super.toString()+ "\nFrequencia:" + frequencia + "\nCanais:" + canais + "\nDistancia Operacional:" + distanciaOperacao;
+    }  
 }
