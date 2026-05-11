@@ -7,6 +7,9 @@ package engtelecom.poo;
 
 public class App {
     public static void main(String[] args) {
-
+        Telefone t = new Telefone(10, "nokia", "serie", 20, new Dimensao(2,2,2));
+        System.out.println(t.toString());
+        SemFio fio = new SemFio(10, "nokia", "serie", 20, new Dimensao(2,2,2), 30, 23, 151);
+        System.out.println(fio.toString());
     }
 }

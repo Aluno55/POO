@@ -7,12 +7,12 @@ public class Telefone {
     private double peso;
     private Dimensao dimensao;
     
-    public Telefone(int codigo, String modelo, String numSerie, double peso, Dimensao dimensao) {
-        this.codigo = codigo;
-        this.modelo = modelo;
-        this.numSerie = numSerie;
-        this.peso = peso;
-        this.dimensao = dimensao;
+    public Telefone(int c, String m, String n, double p, Dimensao d) {
+        this.codigo = c;
+        this.modelo = m;
+        this.numSerie = n;
+        this.peso = p;
+        this.dimensao = d;
     }
 
     @Override
