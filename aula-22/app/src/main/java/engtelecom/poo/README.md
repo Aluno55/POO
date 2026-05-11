@@ -1,20 +1,30 @@
 ```mermaid
 classDiagram
-    Livro <|-- Revista
-    Livro <|-- Jornal
-    Livro <|-- Gibi
+    Obra <|--Revista
+    Obra <|-- Livro
+    Revista <|-- Jornal
+    Revista <|-- Gibi
+        class Livro {
+        - String isbn
+    }
+    class Obra {
+        - double cost
+    }
+    class Revista{
+        - String issn
+    }
     Carro --|> Veiculo
     Aviao --|> Veiculo
     Barco --|> Veiculo
     Caminhao --|> Carro
     class Veiculo{
         - double velocidade
-        - Acerelar(a: double);
+        - Acerelar(a: double) boolean
     }
-    class Livro {
-        - String titulo
-        - ArrayList~Capitulos~ caps
+    class Aviao{
+        - double altitude
     }
+
 ```
 ```mermaid
 classDiagram
@@ -26,12 +36,6 @@ classDiagram
     }
     class Professor{
         - String disciplinas
-    }
-    class Coordenador{
-        -
-    }
-    class Diretor{
-
     }
     Aluno --|> Humano
     Professor --|> Humano
@@ -47,7 +51,6 @@ classDiagram
     Animal <|-- Tubarao
     Animal <|-- Baleia
     class Gato {
-
     }
     class Cachorro {
         
