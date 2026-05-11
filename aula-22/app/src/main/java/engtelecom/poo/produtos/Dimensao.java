@@ -13,6 +13,6 @@ public class Dimensao {
 
     @Override
     public String toString() {
-        return "Largura: " + largura + " | Altura: " + altura + " | Profundidade=" + profundidade;
+        return " Largura= " + largura + " | Altura= " + altura + " | Profundidade= " + profundidade;
     }    
 }
