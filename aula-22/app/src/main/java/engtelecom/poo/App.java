@@ -1,15 +1,12 @@
 /*
 Herança
-
+subclasse (filho) vai ter tudo que a superclasse (pai)
+classe filho pode adicionar ou modificar a classe pai
  */
 package engtelecom.poo;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
     }
 }
