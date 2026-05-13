@@ -16,5 +16,7 @@ public class SemFio extends Telefone{
     @Override
     public String toString() {
         return "--Telefone sem Fio--\n" + super.toString()+ "\nFrequencia:" + frequencia + "\nCanais:" + canais + "\nDistancia Operacional:" + distanciaOperacao;
-    }  
+    }
+
+    public double getFrequencia() {return frequencia;}    
 }

@@ -17,7 +17,7 @@ public class Telefone {
 
     @Override
     public String toString() {
-        return "--Telefone--\n Codigo:" + codigo + "\nModelo:" + modelo + "\nNumero de Serie" + numSerie + "\nPeso:" + peso
+        return "--Telefone--\nCodigo:" + codigo + "\nModelo:" + modelo + "\nNumero de Serie" + numSerie + "\nPeso:" + peso
                 + "\nDimensoes:" + dimensao;
     }    
 }

@@ -1,5 +1,48 @@
 ```mermaid
 classDiagram
+    Animal <|-- Gato
+    Animal <|-- Cachorro
+    Animal <|-- Ave
+    Ave <|-- Arara
+    Ave <|-- Galinha
+    Animal <|-- Marinho
+    Marinho <|-- Tubarao
+    Marinho <|-- Baleia
+    class Marinho {
+        - double altitudeMarinha
+    }
+    class Gato {
+        - int vidas
+        + garras () boolean
+    }
+    class Cachorro {
+        + fetchBall () boolean
+    }
+    class Ave{
+        - int ovos
+    }
+    class Arara {
+        - int altitute
+    }
+    class Galinha {
+        - boolean head
+    }
+    class Tubarao {
+        + bloodRadar ()
+    }
+    class Baleia {
+        + travel ()
+    }
+    class Animal {
+        - String alimentacao
+        - String habitat
+    }
+```
+
+Animais tem filo, classe, ordem, familia, as heranças definiriam genero e especie, imagino eu.
+
+```mermaid
+classDiagram
     Obra <|--Revista
     Obra <|-- Livro
     Revista <|-- Jornal
@@ -42,35 +85,3 @@ classDiagram
     Coordenador --|> Professor
     Diretor --|> Humano
 ```
-```mermaid
-classDiagram
-    Animal <|-- Gato
-    Animal <|-- Cachorro
-    Animal <|-- Arara
-    Animal <|-- Galinha
-    Animal <|-- Tubarao
-    Animal <|-- Baleia
-    class Gato {
-    }
-    class Cachorro {
-        
-    }
-    class Arara {
-        
-    }
-    class Galinha {
-        
-    }
-    class Tubarao {
-        
-    }
-    class Baleia {
-        
-    }
-    class Animal {
-        - String alimentacao
-        - String habitat
-    }
-```
-
-Animais tem filo, classe, ordem, familia, as heranças definiriam genero e especie, imagino eu.
