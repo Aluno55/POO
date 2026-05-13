@@ -1,13 +1,13 @@
 package engtelecom.poo.minijogo;
 
-public class Character {
+public class Personagem {
     protected int health;
     protected int attack;
     protected double speed;
     private double positionX;
     private double positionY;
 
-    public Character(int health, int attack, double speed, double x, double y) {
+    public Personagem(int health, int attack, double speed, double x, double y) {
         this.health = health;
         this.attack = attack;
         this.speed = speed;

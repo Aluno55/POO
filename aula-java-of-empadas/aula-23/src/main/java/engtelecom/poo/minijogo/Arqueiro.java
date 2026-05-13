@@ -1,6 +1,6 @@
 package engtelecom.poo.minijogo;
 
-public class Arqueiro extends Character{
+public class Arqueiro extends Personagem{
     public Arqueiro(double x, double y) {
         super(25, 2, 1, x, y);
     }

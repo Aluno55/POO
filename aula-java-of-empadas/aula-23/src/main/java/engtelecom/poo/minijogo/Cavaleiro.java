@@ -1,6 +1,6 @@
 package engtelecom.poo.minijogo;
 
-public class Cavaleiro extends Character{
+public class Cavaleiro extends Personagem{
     public Cavaleiro(double x, double y) {
         super(50, 3, 2, x, y);
     }

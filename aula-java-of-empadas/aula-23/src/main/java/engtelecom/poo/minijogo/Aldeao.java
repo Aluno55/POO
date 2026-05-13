@@ -1,6 +1,6 @@
 package engtelecom.poo.minijogo;
 
-public class Aldeao extends Character{
+public class Aldeao extends Personagem{
     public Aldeao(double x, double y) {
         super(25, 1, 0.8, x, y);
     }
