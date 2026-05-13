@@ -6,7 +6,7 @@ public class Aldeao extends Character{
     }
     @Override
     public String atacar() {
-        return "Aldeão bofetou o alvo, causando 1 de dano";
+        return "Aldeão bofetou o alvo, causando "+ attack +" de dano";
     }
 
     @Override

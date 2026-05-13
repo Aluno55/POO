@@ -6,7 +6,7 @@ public class Arqueiro extends Character{
     }
     @Override
     public String atacar() {
-        return "Arqueiro atirou no alvo, causando 2 de dano";
+        return "Arqueiro atirou no alvo, causando "+ attack +" de dano";
     }
 
     @Override

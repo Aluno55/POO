@@ -1,9 +1,9 @@
 package engtelecom.poo.minijogo;
 
 public class Character {
-    private int health;
-    private int attack;
-    private double speed;
+    protected int health;
+    protected int attack;
+    protected double speed;
     private double positionX;
     private double positionY;
 

@@ -6,7 +6,7 @@ public class Cavaleiro extends Character{
     }
     @Override
     public String atacar() {
-        return "Cavaleiro cortou o alvo, causando 3 de dano";
+        return "Cavaleiro cortou o alvo, causando "+ attack +" de dano";
     }
 
     @Override
