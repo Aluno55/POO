@@ -1,6 +1,6 @@
 package engtelecom.poo.minijogo;
 
-public class Personagem {
+public abstract class Personagem {
     protected int health;
     protected int attack;
     protected double speed;
@@ -15,11 +15,6 @@ public class Personagem {
         this.positionY = y;
     }
 
-    public String mover (double x, double y){
-        double d = Math.sqrt(x * x + y * y);
-        positionX +=x;
-        positionY +=y;
-        return "Alguem moveu um total de " + d;
-        }
-    public String atacar (){return "Alguem atacou";}
+    public abstract String mover (double x, double y);
+    public abstract String atacar ();
 }

@@ -14,4 +14,5 @@ public class Aldeao extends Personagem{
         double d = Math.sqrt(x * x + y * y);
         return "Aldeão caminhou por " + d + " metros";
     }
+    
 }

@@ -1,6 +1,5 @@
 package engtelecom.poo;
 import engtelecom.poo.minijogo.Aldeao;
-import edu.princeton.cs.algs4.Draw;
 import engtelecom.poo.minijogo.Personagem;
 import engtelecom.poo.minijogo.Arqueiro;
 import engtelecom.poo.minijogo.Cavaleiro;

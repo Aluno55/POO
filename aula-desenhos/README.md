@@ -1,6 +1,7 @@
 ```mermaid
 classDiagram
 class Forma{
+    <<abstract>>
     - String corLinha
     - Ponto inicial
     + desenhar () String
@@ -19,6 +20,7 @@ class Linha{
     - Ponto final
 }
 class Area {
+    <<abstract>>
     - String corArea
     + calcArea () double
     + calcPer () double
