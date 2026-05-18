@@ -17,6 +17,8 @@ public class Personagem {
 
     public String mover (double x, double y){
         double d = Math.sqrt(x * x + y * y);
+        positionX +=x;
+        positionY +=y;
         return "Alguem moveu um total de " + d;
         }
     public String atacar (){return "Alguem atacou";}

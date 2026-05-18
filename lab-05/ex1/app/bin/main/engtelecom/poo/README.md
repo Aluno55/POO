@@ -2,31 +2,26 @@
 classDiagram
     class Relogio{
         + Relogio ()
-        - ArrayList ~Display~ dHora
-        - ArrayList ~Display~ dMinuto
-        - ArrayList ~Display~ dSegundo
-        + onSwitch () boolean
+        + counter (val: int) void 
+        - int segundos
+        - int minutos
+        - int horas
+        - ArrayList ~Display~ displays
     }
     class Display{
         + Display ()
         - ArrayList ~Segmento~ segs
-        + onSwitch () boolean
+        + setSegmento 
     }
     class Segmento{
         - Draw seg
         - boolean onoff
         + Segmento ()
         + onSwitch () boolean
+        + desligar () void
+        + segmentoHorizontal () void
+        + segmentoVertical () void
     }
     Display "6"--*"1" Relogio
     Segmento "7"--*"1" Display
 ```
--a-
-
-f-b
-
--g-
-
-e-c
-
--d-
