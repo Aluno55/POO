@@ -1,17 +1,17 @@
 ```mermaid
 classDiagram
-class Forma{
+class _Forma_{
     <<abstract>>
     - String corLinha
     - Ponto inicial
-    + desenhar () String
+    + desenhar () String*
 }
-Forma "1"*--"1" Ponto
-Forma <|-- Area
-Forma <|-- Linha
+_Forma_ "1"*--"1" Ponto
+_Forma_ <|-- _Area_
+_Forma_ <|-- Linha
 Linha "1"*--"2" Ponto
-Area <|-- Circulo
-Area <|-- Retangulo
+_Area_ <|-- Circulo
+_Area_ <|-- Retangulo
 class Ponto{
     - double X
     - double Y
@@ -19,11 +19,11 @@ class Ponto{
 class Linha{
     - Ponto final
 }
-class Area {
+class _Area_ {
     <<abstract>>
     - String corArea
-    + calcArea () double
-    + calcPer () double
+    + calcArea () double*
+    + calcPer () double*
 }
 class Circulo{
     - double raio

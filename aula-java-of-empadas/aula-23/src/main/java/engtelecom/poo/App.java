@@ -13,7 +13,7 @@ public class App {
 
         for (Personagem i : personagem) {
             System.out.println(i.mover(3, 4));
-            System.out.println(i.atacar());
+            // System.out.println(i.atacar());
         }
     }
 }

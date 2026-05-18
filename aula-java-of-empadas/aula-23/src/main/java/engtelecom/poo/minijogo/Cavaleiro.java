@@ -1,9 +1,10 @@
 package engtelecom.poo.minijogo;
 
-public class Cavaleiro extends Personagem{
+public class Cavaleiro extends Personagem implements Guerreiro{
     public Cavaleiro(double x, double y) {
         super(50, 3, 2, x, y);
     }
+    
     @Override
     public String atacar() {
         return "Cavaleiro cortou o alvo, causando "+ attack +" de dano";
