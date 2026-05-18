@@ -1,14 +1,14 @@
 ```mermaid
 classDiagram
-class _Forma_{
+class _FormaGeo_{
     <<abstract>>
     - String corLinha
     - Ponto inicial
     + desenhar () String*
 }
-_Forma_ "1"*--"1" Ponto
-_Forma_ <|-- _Area_
-_Forma_ <|-- Linha
+_FormaGeo_ "1"*--"1" Ponto
+_FormaGeo_ <|-- _Area_
+_FormaGeo_ <|-- Linha
 Linha "1"*--"2" Ponto
 _Area_ <|-- Circulo
 _Area_ <|-- Retangulo

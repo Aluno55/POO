@@ -1,10 +1,10 @@
 package engtelecom.poo.minijogo;
 
-public class Aldeao extends Personagem implements Guerreiro, Colecionador{
+public class Aldeao extends Personagem implements Guerreiro, Coletador{
     public Aldeao(double x, double y) {
         super(25, 1, 0.8, x, y);
     }
-    
+
     @Override
     public String atacar() {
         return "Aldeão bofetou o alvo, causando "+ attack +" de dano";

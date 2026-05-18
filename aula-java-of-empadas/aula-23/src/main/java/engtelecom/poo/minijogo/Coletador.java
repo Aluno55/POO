@@ -1,6 +1,6 @@
 package engtelecom.poo.minijogo;
 
-public interface Colecionador {
+public interface Coletador {
     public String coletarMadeira();
     public String coletarOuro();
 }
