@@ -11,11 +11,11 @@ public abstract class Cronometro extends Relogio {
         if (diminuir){a = -1;}
         segundo+=a;
         if (segundo <= 60){
-            minuto++;
+            minuto+=a;
             segundo = 0;
         }
         if (minuto <= 60){
-            hora++;
+            hora+=a;
             minuto = 0;
         }
         TimeUnit.SECONDS.sleep(1);

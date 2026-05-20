@@ -29,21 +29,6 @@ classDiagram
         + Segmento ()
     }
     class Analogico{
-        - corFundo
-        - corRelogio
-        - corPonteiro
-        - corSegundo
-        - double centroX
-        - double centroY
-        - double raio
-        - double sizeSeg
-        - double sizeHora
-        - double raioEnd
-        - double raioStart
-        - double espessuraHora
-        - double espessuraSeg
-        - int ponteiroHora
-        - double angulo
         + Analogico ()
         + contar () void
     }
