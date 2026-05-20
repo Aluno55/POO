@@ -5,28 +5,34 @@ classDiagram
         - int hora
         - int minuto
         - int segundo
-        - Cor cor
         - Draw clock
+        - var cor
         + contar () void
     }
     class Cronometro {
         <<interface>>
-        + cronometrar (crescer: boolean) void
+        + cronometrar (diminuir: boolean) void
     }
     Cronometro <|.. DigitalSeg
     Cronometro <|.. DigitalTxt
     class DigitalSeg{
         - Display[] display
+        + DigitalSeg ()
         + contar () void
+        + cronometrar (diminuir: boolean) void
     }
     class Display{
         - Segmentos[] segs
+        - int num
+        + Display ()
+        + ligarSegmentos () boolean
     }
     class Segmento{
         - boolean onoff
         - Cor cor
         - double[] x
         - double[] y
+        + Segmento ()
     }
     class Analogico{
         - corFundo
@@ -48,7 +54,9 @@ classDiagram
         + contar () void
     }
     class DigitalTxt{
+        + DigitalTxt ()
         + contar () void
+        + cronometrar (diminuir: boolean) void
     }
 
     _Relogio_ <|-- DigitalSeg
