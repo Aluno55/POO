@@ -1,4 +1,6 @@
 package engtelecom.poo;
+import java.awt.FontFormatException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import edu.princeton.cs.algs4.Draw;
 
@@ -14,7 +16,7 @@ public abstract class Relogio {
         this.segundo = segundo;
     }
 
-    public void contar () throws InterruptedException {
+    public void contar () throws InterruptedException, FontFormatException, IOException {
         segundo++;
         if (segundo <= 60){
             minuto++;
