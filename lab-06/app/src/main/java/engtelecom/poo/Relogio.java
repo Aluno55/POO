@@ -1,4 +1,5 @@
 package engtelecom.poo;
+import java.awt.Color;
 import java.awt.FontFormatException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -8,6 +9,7 @@ public abstract class Relogio {
     protected int hora;
     protected int minuto;
     protected int segundo;
+    protected Color cor;
     protected Draw clock;
     
     public Relogio(int hora, int minuto, int segundo) {

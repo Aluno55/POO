@@ -13,10 +13,6 @@ public class Analogico extends Relogio{
         clock = new Draw();
         clock.enableDoubleBuffering();
         clock.setDefaultCloseOperation(3);
-        var corFundo = Draw.LIGHT_GRAY;
-        var corClock = Draw.WHITE;
-        var corTracos = Draw.BLACK;
-        var corSegundos = Draw.RED;
         double centroX = 0.5;
         double centroY = 0.5;
         double raio = 0.2;
@@ -29,10 +25,10 @@ public class Analogico extends Relogio{
         double angulo = 30;
 
         while (true) {
-            clock.clear(corFundo);
-            clock.setPenColor(corClock);
+            clock.clear(Draw.LIGHT_GRAY);
+            clock.setPenColor(Draw.WHITE);
             clock.filledCircle(centroX, centroY, raio);
-            clock.setPenColor(corTracos);
+            clock.setPenColor(Draw.BLACK);
             clock.setPenRadius(espessuraHora);
             for (int traco = 0; traco < 12; traco++) {
                 double angle = Math.toRadians(traco+angulo);
@@ -49,7 +45,7 @@ public class Analogico extends Relogio{
             double anguloSegundo = Math.toRadians(angulo * segundo);
             clock.line((centroX), (centroY), (centroX + sizeHora * Math.sin(anguloHora)), centroY + sizeHora * Math.cos(anguloHora));
             clock.line((centroX), (centroY), (centroX + sizeSeg * Math.sin(anguloMinuto)), centroY + sizeSeg * Math.cos(anguloMinuto));
-            clock.setPenColor(corSegundos);
+            clock.setPenColor(Draw.RED);
             clock.setPenRadius(espessuraSeg);
             clock.line((centroX), (centroY), (centroX + sizeSeg * Math.sin(anguloSegundo)), centroY + sizeSeg * Math.cos(anguloSegundo));
             clock.show();
