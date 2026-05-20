@@ -13,6 +13,8 @@ public class Cavaleiro extends Personagem implements Guerreiro{
     @Override
     public String mover(double x, double y) {
         double d = Math.sqrt(x * x + y * y);
+        positionX +=x;
+        positionY +=y;
         return "Cavaleiro calopou por " + d + " metros";
     }
 }

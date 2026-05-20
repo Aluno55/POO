@@ -6,8 +6,8 @@ public abstract class Personagem {
     protected int health;
     protected int attack;
     protected double speed;
-    private double positionX;
-    private double positionY;
+    protected double positionX;
+    protected double positionY;
 
     // Constructor
     public Personagem(int health, int attack, double speed, double x, double y) {
