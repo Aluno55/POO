@@ -9,12 +9,6 @@ classDiagram
         - var cor
         + contar () void
     }
-    class Cronometro {
-        <<interface>>
-        + cronometrar (diminuir: boolean) void
-    }
-    Cronometro <|.. DigitalSeg
-    Cronometro <|.. DigitalTxt
     class DigitalSeg{
         - Display[] display
         + DigitalSeg ()
@@ -59,10 +53,14 @@ classDiagram
         + cronometrar (diminuir: boolean) void
     }
 
-    _Relogio_ <|-- DigitalSeg
-    _Relogio_ <|-- DigitalTxt
-    _Relogio_ <|-- Analogico
     Display "1"*--"7"Segmento
     DigitalSeg "1"*--"6" Display
-
+    Cronometro --|> _Relogio_
+    DigitalSeg--|>Cronometro
+    DigitalTxt--|>Cronometro
+    _Relogio_ <|-- Analogico
+    class Cronometro{
+        <<abstract>>
+        + cronometrar (diminuir: boolean) void
+        }
 ```
