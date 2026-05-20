@@ -7,7 +7,6 @@ public class Segmento {
     private double[] x;
     private double[] y;
 
-
-
-    public boolean onoffSwitch(){return onoff = !onoff;}
+    public boolean setOff(){return onoff = false;}
+    public boolean setOn(){return onoff = true;}
 }
