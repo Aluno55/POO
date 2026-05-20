@@ -1,8 +1,6 @@
 package engtelecom.poo;
-
 import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
-
 import edu.princeton.cs.algs4.Draw;
 
 public class Analogico extends Relogio{
