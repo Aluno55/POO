@@ -26,7 +26,7 @@ public class DigitalTxt extends Cronometro {
         clock = new Draw();
         clock.enableDoubleBuffering();
         clock.setDefaultCloseOperation(3);
-        clock.setPenColor(cor);
+        clock.setPenColor(Draw.BLACK);
         var arquivo = App.class.getClassLoader().getResourceAsStream("Micro5-Regular.ttf");
         Font customFont = Font.createFont(Font.TRUETYPE_FONT, arquivo);
         customFont = customFont.deriveFont(36f);
