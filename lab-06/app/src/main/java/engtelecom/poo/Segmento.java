@@ -1,5 +1,6 @@
 package engtelecom.poo;
 import java.awt.Color;
+import edu.princeton.cs.algs4.Draw;
 
 public class Segmento {
     private boolean onoff;
@@ -16,22 +17,23 @@ public class Segmento {
 
         return onoff = true;
     }
-}
 
-// Draw desenho = new Draw();
-// int dimensao = 800;
-// desenho.setCanvasSize(dimensao, dimensao);
-// desenho.setXscale(0, dimensao);
-// desenho.setYscale(0, dimensao);
-// double fator = 200;
+    public void poligono(){
+        Draw desenho = new Draw();
+        int d = 1; // 800
+        desenho.setCanvasSize(d, d);
+        desenho.setXscale(0, d);
+        desenho.setYscale(0, d);
+        double fator = .25; // 200
+        desenho.enableDoubleBuffering();
+        desenho.clear(Draw.LIGHT_GRAY);
+    }
+}
 // double fatorCor = 0.2;
 // Color clara = Draw.GREEN;
 // Color escura = new Color((int)(clara.getRed()*fatorCor),
 // (int)(clara.getGreen()*fatorCor),
 // (int)(clara.getBlue()*fatorCor));
-// desenho.enableDoubleBuffering();
-// desenho.clear(Draw.WHITE);
-// // Desenhando grade quadriculada
 // int grade = (int) fator/10;
 // desenho.setPenColor(Draw.LIGHT_GRAY);
 // for (int i = 0; i <= dimensao; i += grade) {
