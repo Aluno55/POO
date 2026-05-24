@@ -8,6 +8,6 @@ public class App {
         // Analogico a = new Analogico(0, 0, 0);
         // a.contar();
         // t.contar();     
-        t.cronometrar(true);   
+        // t.cronometrar(true);   
     }
 }

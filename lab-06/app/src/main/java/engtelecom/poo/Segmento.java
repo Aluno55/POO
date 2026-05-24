@@ -5,65 +5,42 @@ import edu.princeton.cs.algs4.Draw;
 public class Segmento {
     private boolean onoff;
     private Color cor;
-    private double[] x;
-    private double[] y;
+    private double x;
+    private double y;
 
-    public boolean setOff(){
-
-        return onoff = false;
+    public Segmento(Color cor) {
+        setOff();
     }
 
-    public boolean setOn(){
+    public boolean setOff(){return onoff = false;}
+    public boolean setOn(){return onoff = true;}
 
-        return onoff = true;
-    }
-
-    public void poligono(){
+    public void poligono(int d, String direction){
         Draw desenho = new Draw();
-        int d = 1; // 800
+        Color escura = new Color((int)(cor.getRGB()*0.2));
         desenho.setCanvasSize(d, d);
         desenho.setXscale(0, d);
         desenho.setYscale(0, d);
-        double fator = .25; // 200
+        double fator = d*.25;
         desenho.enableDoubleBuffering();
         desenho.clear(Draw.LIGHT_GRAY);
+        if (onoff) {
+            desenho.setPenColor(cor);
+        } else {desenho.setPenColor(escura);}
+        if (direction.equalsIgnoreCase("Horizontal")) {
+            x = d*.375;
+            y = d*.225;
+            double []xHorizontal= {0.1*fator+x, 0.2*fator+x, 1*fator+x, 1.1*fator+x, 1*fator+x, 0.2*fator+x};
+            double []yHorizontal= {0.2*fator+y, 0.3*fator+y, 0.3*fator+y, 0.2*fator+y, 0.1*fator+y, 0.1*fator+y};
+            desenho.filledPolygon(xHorizontal, yHorizontal);
+        } else {
+            y = d*.25;
+            double []xVertical= {0.1*fator+x, 0.2*fator+x, 0.2*fator+x, 0.1*fator+x, 1*fator+x, 0.2*fator+x};
+            double []yVertical= {0.2*fator+y, 0.3*fator+y, 1*fator+y, 1.1*fator+y, 1*fator+y, 0.3*fator+y};
+            desenho.filledPolygon(xVertical, yVertical);
+        }
+        desenho.show();
     }
 }
-// double fatorCor = 0.2;
-// Color clara = Draw.GREEN;
-// Color escura = new Color((int)(clara.getRed()*fatorCor),
-// (int)(clara.getGreen()*fatorCor),
-// (int)(clara.getBlue()*fatorCor));
-// int grade = (int) fator/10;
-// desenho.setPenColor(Draw.LIGHT_GRAY);
-// for (int i = 0; i <= dimensao; i += grade) {
-// desenho.line(i, 0, i, dimensao); // linha vertical
-// desenho.line(0, i, dimensao, i); // linha horizontal
-// }
-// double xInicial = 300;
-// double yInicial = 400;
-// // Montando vetores com os pontos em X e em Y para desenhar um segmento horizontal
-// yInicial = 180;
-// double[] xHorizontal = {0.1*fator+xInicial, 0.2*fator+xInicial, 1.0*fator+xInicial, 1.1*fator+xInicial, 1.0*fator+
-// xInicial, 0.2*fator+xInicial};
-// double[] yHorizontal = {0.2*fator+yInicial, 0.3*fator+yInicial, 0.3*fator+yInicial, 0.2*fator+yInicial, 0.1*fator+
-// yInicial, 0.1*fator+yInicial};
-// // Desenhando o segmento horizontal
-// desenho.setPenColor(clara);
-// desenho.filledPolygon(xHorizontal, yHorizontal);
-// // Montando vetores com os pontos em X e em Y para desenhar um segmento vertical
-// yInicial = 200;
-// double[] xVertical = {0.1*fator+xInicial, 0.2*fator+xInicial, 0.2*fator+xInicial, 0.1*fator+xInicial, 0*fator+
-// xInicial, 0*fator+xInicial};
-// double[] yVertical = {0.2*fator+yInicial, 0.3*fator+yInicial, 1.0*fator+yInicial, 1.1*fator+yInicial, 1.0*fator+
-// yInicial, 0.3*fator+yInicial};
-// // Desenhando o segmento vertical
-// desenho.setPenColor(escura);
-// desenho.filledPolygon(xVertical, yVertical);
-// // Desenhando outro segmento vertical, porém com x deslocado em 'fator' pixels
 // for (int i = 0; i < xVertical.length; i++) {
 // xVertical[i]+=fator;
-// }
-// desenho.filledPolygon(xVertical, yVertical);
-// // Trocando o buffer para exibir o que foi desenhado
-// desenho.show();
