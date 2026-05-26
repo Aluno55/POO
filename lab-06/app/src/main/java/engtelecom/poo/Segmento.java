@@ -39,7 +39,6 @@ public class Segmento {
             double []yVertical= {0.2*fator+y, 0.3*fator+y, 1*fator+y, 1.1*fator+y, 1*fator+y, 0.3*fator+y};
             desenho.filledPolygon(xVertical, yVertical);
         }
-        desenho.show();
     }
 }
 // for (int i = 0; i < xVertical.length; i++) {

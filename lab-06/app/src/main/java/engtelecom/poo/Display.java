@@ -1,15 +1,22 @@
 package engtelecom.poo;
 import java.awt.Color;
+import edu.princeton.cs.algs4.Draw;
 
 public class Display {
     private Segmento[] segs;
     private int num;
-    private Color cor;
 
-    public Display(int num, Color cor) {
+    public Display(int num) {
         this.num = num;
-        this.cor = cor;
         segs = new Segmento[7]; // 0 to 6
+        Color r = Draw.RED;
+        segs[0] = new Segmento(r);
+        segs[1] = new Segmento(r);
+        segs[2] = new Segmento(r);
+        segs[3] = new Segmento(r);
+        segs[4] = new Segmento(r);
+        segs[5] = new Segmento(r);
+        segs[6] = new Segmento(r);
     }
 
     public void seteSegmentos(){
