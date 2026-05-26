@@ -6,17 +6,17 @@ public class Display {
     private Segmento[] segs;
     private int num;
 
-    public Display(int num) {
+    public Display(int num, Color r, double d) {
         this.num = num;
         segs = new Segmento[7]; // 0 to 6
-        Color r = Draw.RED;
-        segs[0] = new Segmento(r);
-        segs[1] = new Segmento(r);
-        segs[2] = new Segmento(r);
-        segs[3] = new Segmento(r);
-        segs[4] = new Segmento(r);
-        segs[5] = new Segmento(r);
-        segs[6] = new Segmento(r);
+        segs[0] = new Segmento(r, d/2+d*.25, d/2);
+        segs[1] = new Segmento(r, d/2+d*.25, d/2+d*.25);
+        segs[2] = new Segmento(r, d/2+d*.25, d/2+d*.25);
+        segs[3] = new Segmento(r, d/2, d/2);
+        segs[4] = new Segmento(r, d/2, d/2);
+        segs[5] = new Segmento(r, d/2-d*.25, d/2);
+        segs[6] = new Segmento(r, d/2-d*.25, d/2);
+        seteSegmentos();
     }
 
     public void seteSegmentos(){

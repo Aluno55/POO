@@ -8,8 +8,11 @@ public class Segmento {
     private double x;
     private double y;
 
-    public Segmento(Color cor) {
+    public Segmento(Color cor, double x, double y) {
         setOff();
+        this.cor = cor;
+        this.x = x;
+        this.y = y;
     }
 
     public boolean setOff(){return onoff = false;}

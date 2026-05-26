@@ -20,11 +20,11 @@ public abstract class Relogio {
 
     public void contar () throws InterruptedException, FontFormatException, IOException {
         segundo++;
-        if (segundo <= 60){
+        if (segundo >= 60){
             minuto++;
             segundo = 0;
         }
-        if (minuto <= 60){
+        if (minuto >= 60){
             hora++;
             minuto = 0;
         }

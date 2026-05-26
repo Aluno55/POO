@@ -32,7 +32,6 @@ public class DigitalTxt extends Cronometro {
                 if (hora <= 0){
                     hora = 0;
                 }
-
             } else {
                 segundo++;
                 if (segundo >= 60){
@@ -44,8 +43,6 @@ public class DigitalTxt extends Cronometro {
                     minuto = 0;
                 }
             }
-                
-
             clock.clear(Draw.LIGHT_GRAY);
             clock.text(.75,0.75,hora +":"+ minuto +":"+ segundo);
             clock.show();
