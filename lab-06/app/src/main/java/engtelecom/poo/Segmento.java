@@ -18,12 +18,12 @@ public class Segmento {
     public boolean setOff(){return onoff = false;}
     public boolean setOn(){return onoff = true;}
 
-    public void poligono(int d, String direction){
+    public Draw poligono(double d, String direction){
         Draw desenho = new Draw();
         Color escura = new Color((int)(cor.getRGB()*0.2));
-        desenho.setCanvasSize(d, d);
-        desenho.setXscale(0, d);
-        desenho.setYscale(0, d);
+        // desenho.setCanvasSize(d, d);
+        // desenho.setXscale(0, d);
+        // desenho.setYscale(0, d);
         double fator = d*.25;
         desenho.enableDoubleBuffering();
         desenho.clear(Draw.LIGHT_GRAY);
@@ -42,7 +42,6 @@ public class Segmento {
             double []yVertical= {0.2*fator+y, 0.3*fator+y, 1*fator+y, 1.1*fator+y, 1*fator+y, 0.3*fator+y};
             desenho.filledPolygon(xVertical, yVertical);
         }
+        return desenho;
     }
 }
-// for (int i = 0; i < xVertical.length; i++) {
-// xVertical[i]+=fator;

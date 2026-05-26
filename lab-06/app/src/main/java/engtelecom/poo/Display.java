@@ -7,15 +7,22 @@ public class Display {
     private int num;
 
     public Display(int num, Color r, double d) {
-        this.num = num;
+        this.num = (num > 0)? num : 0;
         segs = new Segmento[7]; // 0 to 6
         segs[0] = new Segmento(r, d/2+d*.25, d/2);
+        segs[0].poligono(d, "Horizontal");
         segs[1] = new Segmento(r, d/2+d*.25, d/2+d*.25);
+        segs[1].poligono(d, "Vertical");
         segs[2] = new Segmento(r, d/2+d*.25, d/2+d*.25);
+        segs[2].poligono(d, "Vertical");
         segs[3] = new Segmento(r, d/2, d/2);
+        segs[3].poligono(d, "Horizontal");
         segs[4] = new Segmento(r, d/2, d/2);
+        segs[4].poligono(d, "Vertical");
         segs[5] = new Segmento(r, d/2-d*.25, d/2);
+        segs[5].poligono(d, "Vertical");
         segs[6] = new Segmento(r, d/2-d*.25, d/2);
+        segs[6].poligono(d, "Horizontal");
         seteSegmentos();
     }
 
@@ -94,5 +101,4 @@ public class Display {
                 break;
         }
     }
-
 }
