@@ -18,30 +18,29 @@ public class Segmento {
     public boolean setOff(){return onoff = false;}
     public boolean setOn(){return onoff = true;}
 
-    public Draw poligono(double d, String direction){
-        Draw desenho = new Draw();
+    public Draw poligono(double d, String direction, Draw clock){
         Color escura = new Color((int)(cor.getRGB()*0.2));
-        // desenho.setCanvasSize(d, d);
-        // desenho.setXscale(0, d);
-        // desenho.setYscale(0, d);
+        // clock.setCanvasSize(d, d);
+        // clock.setXscale(0, d);
+        // clock.setYscale(0, d);
         double fator = d*.25;
-        desenho.enableDoubleBuffering();
-        desenho.clear(Draw.LIGHT_GRAY);
+        clock.enableDoubleBuffering();
+        clock.clear(Draw.LIGHT_GRAY);
         if (onoff) {
-            desenho.setPenColor(cor);
-        } else {desenho.setPenColor(escura);}
+            clock.setPenColor(cor);
+        } else {clock.setPenColor(escura);}
         if (direction.equalsIgnoreCase("Horizontal")) {
             x = d*.375;
             y = d*.225;
             double []xHorizontal= {0.1*fator+x, 0.2*fator+x, 1*fator+x, 1.1*fator+x, 1*fator+x, 0.2*fator+x};
             double []yHorizontal= {0.2*fator+y, 0.3*fator+y, 0.3*fator+y, 0.2*fator+y, 0.1*fator+y, 0.1*fator+y};
-            desenho.filledPolygon(xHorizontal, yHorizontal);
+            clock.filledPolygon(xHorizontal, yHorizontal);
         } else {
             y = d*.25;
             double []xVertical= {0.1*fator+x, 0.2*fator+x, 0.2*fator+x, 0.1*fator+x, 1*fator+x, 0.2*fator+x};
             double []yVertical= {0.2*fator+y, 0.3*fator+y, 1*fator+y, 1.1*fator+y, 1*fator+y, 0.3*fator+y};
-            desenho.filledPolygon(xVertical, yVertical);
+            clock.filledPolygon(xVertical, yVertical);
         }
-        return desenho;
+        return clock;
     }
 }
