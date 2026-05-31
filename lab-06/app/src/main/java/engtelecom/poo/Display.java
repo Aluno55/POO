@@ -12,20 +12,20 @@ public class Display {
         Draw c;
         segs = new Segmento[7]; // 0 to 6
         segs[0] = new Segmento(r, d/2+d*.25, d/2);
-        c = segs[0].poligono(d, "Horizontal", clock);
         segs[1] = new Segmento(r, d/2+d*.25, d/2+d*.25);
-        clock = segs[1].poligono(d, "Vertical", c);
         segs[2] = new Segmento(r, d/2+d*.25, d/2+d*.25);
-        c = segs[2].poligono(d, "Vertical", clock);
         segs[3] = new Segmento(r, d/2, d/2);
-        clock = segs[3].poligono(d, "Horizontal", c);
         segs[4] = new Segmento(r, d/2, d/2);
-        c = segs[4].poligono(d, "Vertical", clock);
         segs[5] = new Segmento(r, d/2-d*.25, d/2);
-        clock = segs[5].poligono(d, "Vertical", c);
         segs[6] = new Segmento(r, d/2-d*.25, d/2);
-        c = segs[6].poligono(d, "Horizontal", clock);
-        dplay = c;
+
+        dplay = segs[0].poligono(d, "Horizontal", clock);
+        dplay = segs[1].poligono(d, "Vertical", dplay);
+        dplay = segs[2].poligono(d, "Vertical", dplay);
+        dplay = segs[3].poligono(d, "Horizontal", dplay);
+        dplay = segs[4].poligono(d, "Vertical", dplay);
+        dplay = segs[5].poligono(d, "Vertical", dplay);
+        dplay = segs[6].poligono(d, "Horizontal", dplay);
         seteSegmentos();
     }
 
