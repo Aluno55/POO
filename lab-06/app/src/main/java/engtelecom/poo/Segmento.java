@@ -25,7 +25,6 @@ public class Segmento {
         // clock.setYscale(0, d);
         double fator = d*.25;
         clock.enableDoubleBuffering();
-        clock.clear(Draw.LIGHT_GRAY);
         if (onoff) {
             clock.setPenColor(cor);
         } else {clock.setPenColor(escura);}

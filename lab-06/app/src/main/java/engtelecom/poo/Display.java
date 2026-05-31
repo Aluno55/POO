@@ -9,11 +9,10 @@ public class Display {
 
     public Display(int num, Color r, double d, Draw clock) {
         this.num = (num > 0)? num : 0;
-        Draw c;
         segs = new Segmento[7]; // 0 to 6
         segs[0] = new Segmento(r, d/2+d*.25, d/2);
         segs[1] = new Segmento(r, d/2+d*.25, d/2+d*.25);
-        segs[2] = new Segmento(r, d/2+d*.25, d/2+d*.25);
+        segs[2] = new Segmento(r, d/2-d*.25, d/2+d*.25);
         segs[3] = new Segmento(r, d/2, d/2);
         segs[4] = new Segmento(r, d/2, d/2);
         segs[5] = new Segmento(r, d/2-d*.25, d/2);
@@ -22,10 +21,10 @@ public class Display {
         dplay = segs[0].poligono(d, "Horizontal", clock);
         dplay = segs[1].poligono(d, "Vertical", dplay);
         dplay = segs[2].poligono(d, "Vertical", dplay);
-        dplay = segs[3].poligono(d, "Horizontal", dplay);
-        dplay = segs[4].poligono(d, "Vertical", dplay);
-        dplay = segs[5].poligono(d, "Vertical", dplay);
-        dplay = segs[6].poligono(d, "Horizontal", dplay);
+        // dplay = segs[3].poligono(d, "Horizontal", dplay);
+        // dplay = segs[4].poligono(d, "Vertical", dplay);
+        // dplay = segs[5].poligono(d, "Vertical", dplay);
+        // dplay = segs[6].poligono(d, "Horizontal", dplay);
         seteSegmentos();
     }
 

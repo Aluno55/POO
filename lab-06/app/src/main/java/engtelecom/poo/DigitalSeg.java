@@ -47,7 +47,7 @@ public class DigitalSeg extends Cronometro{
                     minuto = 0;
                 }
             }
-            clock.clear();
+            clock.clear(Draw.LIGHT_GRAY);
             displays[5] = new Display(segundo%10, cor, 1, clock);
             displays[4] = new Display(segundo/10, cor, 1, clock);
             displays[3] = new Display(minuto%10, cor, 1, clock);
