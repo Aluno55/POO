@@ -26,7 +26,6 @@ public enum DiasDaSemana {
         throw new IllegalArgumentException("Código Inválido");
     }
 
-    public String toString(){
-        return extenso;
-    }
+    @Override
+    public String toString(){return extenso;}
 }
