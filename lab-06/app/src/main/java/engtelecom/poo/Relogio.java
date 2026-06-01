@@ -2,7 +2,6 @@ package engtelecom.poo;
 import java.awt.Color;
 import java.awt.FontFormatException;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 import edu.princeton.cs.algs4.Draw;
 
 public abstract class Relogio {
@@ -28,6 +27,9 @@ public abstract class Relogio {
             hora++;
             minuto = 0;
         }
-        TimeUnit.SECONDS.sleep(1);
     };
+    
+    public void desenhar (){
+        
+    }
 }

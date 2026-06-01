@@ -1,7 +1,6 @@
 package engtelecom.poo;
 import java.awt.FontFormatException;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 public abstract class Cronometro extends Relogio {
     public Cronometro(int hora, int minuto, int segundo) {
@@ -20,6 +19,5 @@ public abstract class Cronometro extends Relogio {
             hora+=a;
             minuto = 0;
         }
-        TimeUnit.SECONDS.sleep(1);
     }
 }

@@ -1,6 +1,5 @@
 package engtelecom.poo;
 import java.time.LocalTime;
-import java.util.concurrent.TimeUnit;
 import edu.princeton.cs.algs4.Draw;
 
 public class Analogico extends Relogio{
@@ -49,7 +48,6 @@ public class Analogico extends Relogio{
             clock.setPenRadius(espessuraSeg);
             clock.line((centroX), (centroY), (centroX + sizeSeg * Math.sin(anguloSegundo)), centroY + sizeSeg * Math.cos(anguloSegundo));
             clock.show();
-            TimeUnit.SECONDS.sleep(1);
         }
     };
 }

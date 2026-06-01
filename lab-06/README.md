@@ -7,12 +7,11 @@ classDiagram
         - int segundo
         - Draw clock
         - var cor
-        + contar () void
+        + _contar () void_
     }
     class DigitalSeg{
         - Display[] display
         + DigitalSeg ()
-        + contar () void
         + cronometrar (diminuir: boolean) void
     }
     class Display{
@@ -30,11 +29,9 @@ classDiagram
     }
     class Analogico{
         + Analogico ()
-        + contar () void
     }
     class DigitalTxt{
         + DigitalTxt ()
-        + contar () void
         + cronometrar (diminuir: boolean) void
     }
 

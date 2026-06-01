@@ -2,7 +2,6 @@ package engtelecom.poo;
 import java.awt.*;
 import java.io.IOException;
 import java.time.LocalTime;
-import java.util.concurrent.TimeUnit;
 import edu.princeton.cs.algs4.Draw;
 
 public class DigitalTxt extends Cronometro {
@@ -46,7 +45,6 @@ public class DigitalTxt extends Cronometro {
             clock.clear(Draw.LIGHT_GRAY);
             clock.text(.75,0.75,hora +":"+ minuto +":"+ segundo);
             clock.show();
-            TimeUnit.SECONDS.sleep(1);
         }
     }
 
