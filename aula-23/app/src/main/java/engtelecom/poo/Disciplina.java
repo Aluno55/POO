@@ -12,7 +12,6 @@ public class Disciplina {
         this.dias = dias;
     }
 
-    @Override
     public String toString() {
         return "Sigla: " + sigla + "\nDias: " + Arrays.toString(dias);
     }
