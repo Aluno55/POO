@@ -16,9 +16,6 @@ public class DigitalSeg extends Cronometro{
 
     @Override
     public void cronometrar(boolean diminuir) throws InterruptedException, FontFormatException, IOException {
-        clock = new Draw();
-        clock.enableDoubleBuffering();
-        clock.setDefaultCloseOperation(3);
         while(true){
             if (diminuir){
                 segundo--;
@@ -44,14 +41,12 @@ public class DigitalSeg extends Cronometro{
                     minuto = 0;
                 }
             }
-            clock.clear(Draw.LIGHT_GRAY);
             displays[5] = new Display(segundo%10, cor, 1, clock);
             displays[4] = new Display(segundo/10, cor, 1, clock);
             displays[3] = new Display(minuto%10, cor, 1, clock);
             displays[2] = new Display(minuto/10, cor, 1, clock);
             displays[1] = new Display(hora%10, cor, 1, clock);
             displays[0] = new Display(hora/10, cor, 1, clock);
-            clock.show();
         }
     }
 

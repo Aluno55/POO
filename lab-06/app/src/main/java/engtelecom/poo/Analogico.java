@@ -9,9 +9,6 @@ public class Analogico extends Relogio{
 
     @Override
     public void contar () throws InterruptedException {
-        clock = new Draw();
-        clock.enableDoubleBuffering();
-        clock.setDefaultCloseOperation(3);
         double centroX = 0.5;
         double centroY = 0.5;
         double raio = 0.2;
@@ -22,9 +19,7 @@ public class Analogico extends Relogio{
         double espessuraSeg = raio * 0.025;
         double espessuraHora = raio * 0.05;
         double angulo = 30;
-
         while (true) {
-            clock.clear(Draw.LIGHT_GRAY);
             clock.setPenColor(Draw.WHITE);
             clock.filledCircle(centroX, centroY, raio);
             clock.setPenColor(Draw.BLACK);

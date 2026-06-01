@@ -30,6 +30,11 @@ public abstract class Relogio {
     };
     
     public void desenhar (){
-        
+        clock = new Draw();
+        clock.enableDoubleBuffering();
+        clock.setDefaultCloseOperation(3);
+        clock.setPenColor(cor);
+        clock.clear(Draw.LIGHT_GRAY);
+        clock.show();
     }
 }
