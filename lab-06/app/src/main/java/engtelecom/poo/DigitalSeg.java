@@ -1,10 +1,8 @@
 package engtelecom.poo;
-import java.awt.Color;
 import java.awt.FontFormatException;
 import java.io.IOException;
 import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
-
 import edu.princeton.cs.algs4.Draw;
 
 public class DigitalSeg extends Cronometro{

@@ -31,7 +31,7 @@ public class Analogico extends Relogio{
             clock.setPenColor(Draw.BLACK);
             clock.setPenRadius(espessuraHora);
             for (int traco = 0; traco < 12; traco++) {
-                double angle = Math.toRadians(traco+angulo);
+                double angle = Math.toRadians(traco*angulo);
                 var sen = Math.sin(angle);
                 var cos = Math.cos(angle);
                 clock.line((centroX+raioEnd*sen), (centroY+raioEnd*cos), (centroX+raioStart*sen), (centroY+raioStart*cos));
