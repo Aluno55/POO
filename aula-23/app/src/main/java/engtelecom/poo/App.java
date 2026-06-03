@@ -21,20 +21,13 @@ public class App {
         
         // 13 for each naipe, so 52
         Deque<Carta> deck = new ArrayDeque<>();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 1; i < 5; i++) {
             Naipe a = Naipe.getNaipeName(i);
-            for (int j = 0; j < 13; j++) {
+            for (int j = 1; j < 14; j++) {
                 ValorCarta b = ValorCarta.getValue(j);
                 var carta = new Carta(a, b);
                 deck.add(carta);
             }
         }
-
-        // for (Naipe n) {
-        //     for (ValorCarta v){
-        //         var carta = new Carta(n, v);
-        //         deck.add(carta);
-        //     }
-        // }
     }
 }
