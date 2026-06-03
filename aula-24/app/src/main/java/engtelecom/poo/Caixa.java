@@ -1,6 +1,6 @@
 package engtelecom.poo;
 
-public class Caixa <T> {
+public class Caixa <T> {//Tipos Genericos
     private T conteudo;
     
     public Caixa (T obj){
