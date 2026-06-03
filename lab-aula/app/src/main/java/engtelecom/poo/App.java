@@ -1,9 +1,17 @@
 package engtelecom.poo;
-
 import edu.princeton.cs.algs4.Draw;
+import edu.princeton.cs.algs4.DrawListener;
 
-public class App {
+public class App implements DrawListener {
+
     private Draw draw;
+    
+    @Override
+    public void mouseClicked(double x, double y) {
+        this.draw.picture(x, y, "cartas/1o.png");
+        this.draw.show();
+    }
+    
     public App(){
         this.draw = new Draw();
         this.draw.setCanvasSize(1200,600);
@@ -12,10 +20,13 @@ public class App {
         this.draw.enableDoubleBuffering();
         this.draw.setDefaultCloseOperation(3);
         this.draw.setTitle("Jogo de Cartas");
+
+        this.draw.addListener(null);
+
+        this.draw.clear(Draw.LIGHT_GRAY);
+        this.draw.show();
     }
     public static void main(String[] args) {
         App app = new App();
-        
-
     }
 }
