@@ -13,6 +13,15 @@ public enum Naipe {
         this.nome = nome;
     }
 
+    public static Naipe getNaipeName(int c){
+        for (Naipe i : Naipe.values()) {
+            if (c == i.power) {
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("Planeta Inválido");
+    }
+
     @Override
     public String toString(){return nome;}
 }

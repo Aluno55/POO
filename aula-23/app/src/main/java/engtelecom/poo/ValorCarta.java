@@ -23,6 +23,15 @@ public enum ValorCarta {
         this.valor = valor;
     }    
 
+    public static ValorCarta getValue(int c){
+        for (ValorCarta i : ValorCarta.values()) {
+            if (c == i.valor) {
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("Planeta Inválido");
+    }
+
     @Override
     public String toString(){return nome;}
 }

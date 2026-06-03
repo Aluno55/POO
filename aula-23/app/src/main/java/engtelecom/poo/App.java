@@ -1,5 +1,4 @@
 package engtelecom.poo;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -22,6 +21,15 @@ public class App {
         
         // 13 for each naipe, so 52
         Deque<Carta> deck = new ArrayDeque<>();
+        for (int i = 0; i < 4; i++) {
+            Naipe a = Naipe.getNaipeName(i);
+            for (int j = 0; j < 13; j++) {
+                ValorCarta b = ValorCarta.getValue(j);
+                var carta = new Carta(a, b);
+                deck.add(carta);
+            }
+        }
+
         // for (Naipe n) {
         //     for (ValorCarta v){
         //         var carta = new Carta(n, v);
