@@ -8,10 +8,11 @@ public class App {
         Relogio[] r = new Relogio[3];
         r[0] = new DigitalTxt(0, 0, 0);
         r[1] = new Analogico(0, 0, 0);
+        r[2] = new DigitalSeg(0, 0, 0);
         while (true) {
             for (Relogio v : r){
                 v.contar();
-                
+                v.desenhar();
             }
             TimeUnit.SECONDS.sleep(1);
         }
