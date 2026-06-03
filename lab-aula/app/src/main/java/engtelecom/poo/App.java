@@ -11,7 +11,7 @@ public class App implements DrawListener {
         this.draw.picture(x, y, "cartas/1o.png");
         this.draw.show();
     }
-    
+
     public App(){
         this.draw = new Draw();
         this.draw.setCanvasSize(1200,600);
@@ -21,7 +21,7 @@ public class App implements DrawListener {
         this.draw.setDefaultCloseOperation(3);
         this.draw.setTitle("Jogo de Cartas");
 
-        this.draw.addListener(null);
+        this.draw.addListener(this);
 
         this.draw.clear(Draw.LIGHT_GRAY);
         this.draw.show();
