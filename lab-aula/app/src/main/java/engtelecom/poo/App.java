@@ -7,9 +7,10 @@ import edu.princeton.cs.algs4.DrawListener;
 public class App implements DrawListener {
 
     private Draw draw;
-    
+    private static ArrayList<CartaGrafica> deck;
     @Override
     public void mouseClicked(double x, double y) {
+
     }
 
     public App(){
@@ -25,11 +26,12 @@ public class App implements DrawListener {
         this.draw.show();
     }
     public static void main(String[] args) {
-        ArrayList<Carta> deck = new ArrayList<>();
+        deck = new ArrayList<>();
+        int x = 10;
         for (Naipe n : Naipe.values()) {
             for (ValorCarta v : ValorCarta.values()) {
-                Carta carta = new Carta(n, v);
-                deck.add(carta);
+                CartaGrafica c = new CartaGrafica(n, v, x, 10);
+                deck.add(c);
             }            
         }
         Collections.shuffle(deck);
