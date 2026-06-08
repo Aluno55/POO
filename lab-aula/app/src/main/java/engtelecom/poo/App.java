@@ -18,7 +18,7 @@ public class App implements DrawListener {
         this.draw.setXscale(1,1200);
         this.draw.setYscale(1,600);
         this.draw.enableDoubleBuffering();
-        this.draw.setDefaultCloseOperation(3);
+        this.draw.setDefaultCloseOperation(3); // JFrame.EXIT_ON_CLOSE
         this.draw.setTitle("Jogo de Cartas");
 
         this.draw.addListener(this);
