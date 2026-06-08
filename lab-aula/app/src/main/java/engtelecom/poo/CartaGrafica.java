@@ -21,16 +21,25 @@ public class CartaGrafica extends Carta{
         this.y = y;
     }
 
-    public boolean flipCard() {
-        return abaixada = !abaixada;
-    }
-    
-    public void desenhar(Draw desenho){
-        if (abaixada){
-            desenho.picture(x, y, fileAbaixada);
+    public boolean flipCard(double x, double y) {
+        int w = 72;
+        int h = 96;
+        
+        var w1 = this.y-w/2;
+        var w2 = this.y+w/2;
+        var h1 = this.x-h/2;
+        var h2 = this.x+h/2;
+
+        if (x > h1 && x < h2 && y > w1 && y < w2) {
+            file = fileAbaixada;
+            return abaixada = !abaixada;
         } else {
-            desenho.picture(x, y, file);
+            return abaixada;
         }
+    }
+
+    public void desenhar(Draw desenho){
+        desenho.picture(x, y, file);
         desenho.show();
     }
 }

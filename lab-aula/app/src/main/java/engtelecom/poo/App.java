@@ -1,5 +1,6 @@
 package engtelecom.poo;
-import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collections;
 import edu.princeton.cs.algs4.Draw;
 import edu.princeton.cs.algs4.DrawListener;
 
@@ -9,8 +10,6 @@ public class App implements DrawListener {
     
     @Override
     public void mouseClicked(double x, double y) {
-        CartaGrafica c = new CartaGrafica(Naipe.OURO, ValorCarta.ACE, x, y);
-        c.desenhar(draw);
     }
 
     public App(){
@@ -26,13 +25,14 @@ public class App implements DrawListener {
         this.draw.show();
     }
     public static void main(String[] args) {
-        ArrayDeque<Carta> deck = new ArrayDeque<>();
+        ArrayList<Carta> deck = new ArrayList<>();
         for (Naipe n : Naipe.values()) {
             for (ValorCarta v : ValorCarta.values()) {
                 Carta carta = new Carta(n, v);
                 deck.add(carta);
             }            
         }
+        Collections.shuffle(deck);
         App app = new App();
     }
 }
