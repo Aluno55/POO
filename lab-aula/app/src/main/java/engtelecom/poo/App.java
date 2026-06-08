@@ -1,4 +1,5 @@
 package engtelecom.poo;
+import java.util.ArrayDeque;
 import edu.princeton.cs.algs4.Draw;
 import edu.princeton.cs.algs4.DrawListener;
 
@@ -8,8 +9,8 @@ public class App implements DrawListener {
     
     @Override
     public void mouseClicked(double x, double y) {
-        this.draw.picture(x, y, "cartas/1o.png");
-        this.draw.show();
+        CartaGrafica c = new CartaGrafica(Naipe.OURO, ValorCarta.ACE, x, y);
+        c.desenhar(draw);
     }
 
     public App(){
@@ -20,13 +21,18 @@ public class App implements DrawListener {
         this.draw.enableDoubleBuffering();
         this.draw.setDefaultCloseOperation(3); // JFrame.EXIT_ON_CLOSE
         this.draw.setTitle("Jogo de Cartas");
-
         this.draw.addListener(this);
-
         this.draw.clear(Draw.GREEN);
         this.draw.show();
     }
     public static void main(String[] args) {
+        ArrayDeque<Carta> deck = new ArrayDeque<>();
+        for (Naipe n : Naipe.values()) {
+            for (ValorCarta v : ValorCarta.values()) {
+                Carta carta = new Carta(n, v);
+                deck.add(carta);
+            }            
+        }
         App app = new App();
     }
 }
