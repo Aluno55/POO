@@ -23,7 +23,7 @@ public class App implements DrawListener {
 
         this.draw.addListener(this);
 
-        this.draw.clear(Draw.LIGHT_GRAY);
+        this.draw.clear(Draw.GREEN);
         this.draw.show();
     }
     public static void main(String[] args) {
