@@ -11,9 +11,9 @@ public enum ValorCarta {
     ATE("8",8, "8"),
     NINE("9",9, "9"),
     TEN("10", 10, "10"),
-    JACK("Valete",11, "J"),
-    QUEEN("Rainha",12, "Q"),
-    KING("Rei",13, "K");
+    JACK("Valete",11, "j"),
+    QUEEN("Rainha",12, "q"),
+    KING("Rei",13, "k");
 
     public final String nome;
     public final int valor;

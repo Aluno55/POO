@@ -38,8 +38,7 @@ public class CartaGrafica extends Carta{
         }
     }
 
-    public void desenhar(Draw desenho){
+    public void desenhar(Draw desenho, double x, double y){
         desenho.picture(x, y, file);
-        desenho.show();
     }
 }

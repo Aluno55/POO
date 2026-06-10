@@ -6,24 +6,31 @@ import edu.princeton.cs.algs4.DrawListener;
 
 public class App implements DrawListener {
 
-    private Draw draw;
+    private static Draw draw;
     private static ArrayList<CartaGrafica> deck;
+
     @Override
     public void mouseClicked(double x, double y) {
-
+        for (CartaGrafica c : deck) {
+            if (c.flipCard(x, y)) {
+                c.desenhar(draw, x, y);
+            }
+            c.desenhar(draw, x, y);
+        }
+        draw.show();
     }
 
     public App(){
-        this.draw = new Draw();
-        this.draw.setCanvasSize(1200,600);
-        this.draw.setXscale(1,1200);
-        this.draw.setYscale(1,600);
-        this.draw.enableDoubleBuffering();
-        this.draw.setDefaultCloseOperation(3); // JFrame.EXIT_ON_CLOSE
-        this.draw.setTitle("Jogo de Cartas");
-        this.draw.addListener(this);
-        this.draw.clear(Draw.GREEN);
-        this.draw.show();
+        draw = new Draw();
+        draw.setCanvasSize(1200,600);
+        draw.setXscale(1,1200);
+        draw.setYscale(1,600);
+        draw.enableDoubleBuffering();
+        draw.setDefaultCloseOperation(3); // JFrame.EXIT_ON_CLOSE
+        draw.setTitle("Jogo de Cartas");
+        draw.addListener(this);
+        draw.clear(Draw.GREEN);
+        draw.show();
     }
     public static void main(String[] args) {
         deck = new ArrayList<>();
@@ -35,6 +42,13 @@ public class App implements DrawListener {
             }            
         }
         Collections.shuffle(deck);
+
         App app = new App();
+        for (CartaGrafica c : deck) {
+            for (int i = 0; i < args.length; i+=20) {
+                c.desenhar(draw, i, 100);
+            }
+            draw.show();
+        }
     }
 }
