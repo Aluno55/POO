@@ -33,6 +33,8 @@ public class App implements DrawListener {
     }
     public static void main(String[] args) {
         App app = new App();
+        DadoGUI dado = new DadoGUI(6, 600, 300);
+        elementos.add(dado);
         // deck = new ArrayList<>();
         // int x = 10;
         // for (Naipe n : Naipe.values()) {
