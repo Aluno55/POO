@@ -2,7 +2,7 @@ package engtelecom.poo;
 import java.util.Random;
 import edu.princeton.cs.algs4.Draw;
 
-public class CartaGrafica extends Carta{
+public class CartaGrafica extends Carta implements Elements{
     private String file;
     private String fileAbaixada;
     private double x;
@@ -38,7 +38,8 @@ public class CartaGrafica extends Carta{
         }
     }
 
-    public void desenhar(Draw desenho, double x, double y){
+    @Override
+    public void desenhar(Draw desenho){
         desenho.picture(x, y, file);
     }
 }

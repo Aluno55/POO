@@ -13,9 +13,9 @@ public class App implements DrawListener {
     public void mouseClicked(double x, double y) {
         for (CartaGrafica c : deck) {
             if (c.flipCard(x, y)) {
-                c.desenhar(draw, x, y);
+                c.desenhar(draw);
             }
-            c.desenhar(draw, x, y);
+            c.desenhar(draw);
         }
         draw.show();
     }
@@ -45,10 +45,8 @@ public class App implements DrawListener {
 
         App app = new App();
         for (CartaGrafica c : deck) {
-            for (int i = 0; i < args.length; i+=20) {
-                c.desenhar(draw, i, 100);
-            }
-            draw.show();
+            c.desenhar(draw);
         }
+        draw.show();
     }
 }
