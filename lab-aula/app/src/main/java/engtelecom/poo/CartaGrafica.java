@@ -21,7 +21,8 @@ public class CartaGrafica extends Carta implements Elements{
         this.y = y;
     }
 
-    public boolean flipCard(double x, double y) {
+    @Override
+    public boolean clicouDentro(double x, double y) {
         int w = 72;
         int h = 96;
         

@@ -7,20 +7,16 @@ import edu.princeton.cs.algs4.DrawListener;
 public class App implements DrawListener {
 
     private static Draw draw;
-    private static ArrayList<CartaGrafica> deck;
+    private static ArrayList<Elements> elementos;
 
     @Override
     public void mouseClicked(double x, double y) {
-        DadoGUI dado = new DadoGUI(6, 6, x,y);
-        dado.desenhar(draw);
+        elementos.forEach(e->{
+            if (e.clicouDentro(x,y)) {
+                e.desenhar(draw);
+            }
+        });
         draw.show();
-        // for (CartaGrafica c : deck) {
-        //     if (c.flipCard(x, y)) {
-        //         c.desenhar(draw);
-        //     }
-        //     c.desenhar(draw);
-        // }
-        // draw.show();
     }
 
     public App(){

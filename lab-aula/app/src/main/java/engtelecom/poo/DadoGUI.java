@@ -6,11 +6,15 @@ public class DadoGUI extends Dado implements Elements{
     private double y;
     private String file;
 
-    public DadoGUI(int faces, int valor, double x, double y) {
-        super(faces, valor);
+    public DadoGUI(int faces, double x, double y) {
+        super(faces);
         file = "dados/" + rodar() + ".png";
         this.x = x;
         this.y = y;
+    }
+    @Override
+    public boolean clicouDentro (double x, double y){
+        return false;
     }
     
     @Override

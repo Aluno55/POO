@@ -2,22 +2,22 @@ package engtelecom.poo;
 import java.util.Random;
 
 public class Dado {
-    private int valor; // Curiosidade: a soma dos valores de faces contrarias num dado é igual ao numero de faces +1
     private int faces;
-    
-    public Dado(int faces, int valor) {
+    private int[] stats;
+
+    public Dado(int faces) {
         this.faces = faces;
-        this.valor = valor;
+        stats = new int[faces];
     }
 
-    public int rodar(){
+    public final int rodar(){
         Random r = new Random();
-        int a = r.nextInt(valor);
-        return a;
+        int valor = r.nextInt(1, 7);
+        this.stats[faces-1]++;
+        return valor;
     }
 
     public String statistics(){
-        double s = 1/faces * 100;
-        return "Uma chance de " + s + " porcentos para cada valor";
+        return "Tem uma chance de " + 100/faces + "% de conseguir um valor em especifico";
     }
 }
