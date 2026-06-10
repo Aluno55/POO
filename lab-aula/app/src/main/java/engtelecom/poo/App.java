@@ -11,13 +11,16 @@ public class App implements DrawListener {
 
     @Override
     public void mouseClicked(double x, double y) {
-        for (CartaGrafica c : deck) {
-            if (c.flipCard(x, y)) {
-                c.desenhar(draw);
-            }
-            c.desenhar(draw);
-        }
+        DadoGUI dado = new DadoGUI(6, 6, x,y);
+        dado.desenhar(draw);
         draw.show();
+        // for (CartaGrafica c : deck) {
+        //     if (c.flipCard(x, y)) {
+        //         c.desenhar(draw);
+        //     }
+        //     c.desenhar(draw);
+        // }
+        // draw.show();
     }
 
     public App(){
@@ -33,20 +36,20 @@ public class App implements DrawListener {
         draw.show();
     }
     public static void main(String[] args) {
-        deck = new ArrayList<>();
-        int x = 10;
-        for (Naipe n : Naipe.values()) {
-            for (ValorCarta v : ValorCarta.values()) {
-                CartaGrafica c = new CartaGrafica(n, v, x, 10);
-                deck.add(c);
-            }            
-        }
-        Collections.shuffle(deck);
-
         App app = new App();
-        for (CartaGrafica c : deck) {
-            c.desenhar(draw);
-        }
-        draw.show();
+        // deck = new ArrayList<>();
+        // int x = 10;
+        // for (Naipe n : Naipe.values()) {
+        //     for (ValorCarta v : ValorCarta.values()) {
+        //         CartaGrafica c = new CartaGrafica(n, v, x, 10);
+        //         deck.add(c);
+        //     }            
+        // }
+        // Collections.shuffle(deck);
+
+        // for (CartaGrafica c : deck) {
+        //     c.desenhar(draw);
+        // }
+        // draw.show();
     }
 }
