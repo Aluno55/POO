@@ -70,11 +70,16 @@ public class Termometro {
         return f;
     }
 
-    public double differenceBetween(Termometro t){
-        if (t.unit.equalsIgnoreCase(unit)) {
-            
+    public double differenceBetween(Termometro t, String unit){
+        switch (unit) {
+            case "Fahrenheit":
+                return Math.abs(t.set2Fahrenheit(t.getValor()) - set2Fahrenheit(valor));
+            case "Kelvin":
+                return Math.abs(t.set2Kelvin(t.getValor())-set2Kelvin(valor));
+            case "Celsius":
+                return Math.abs(t.set2Celsius(t.getValor())-set2Celsius(valor));
+            default:
+                return 1;
         }
-        return 1;
     }
-
 }
