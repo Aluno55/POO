@@ -12,7 +12,7 @@ gradle -q run < asterisco.txt
 - [Laboratório 03](./lab-03/) - Lista de Exercicios para Objetos
 
 ## Aulas
-- [Aula 01](./aula-01/) - Introdução à linguagem Java
+- Aula 01 - Introdução à linguagem Java
 - [Aula 04](./aula-04/) - Iniciando Java
 <!-- Lembrete:
 mkdir aula-N
@@ -41,4 +41,5 @@ Objeto é semelhante a DNA? Dita como é (atributos, caracteristicas), o que faz
 -->
 - [Aula 16 & 17](./aula-16/) - Collections & Streams
 - [Aula 18 ~ 20](./aula-18/) - Mermaid
-- [Aula 22 ~ 23](./aula-22/) - Herança
+- Aula 22 ~ 24 - Herança & Enumeração
+- Aula Final - Teste de Unidade, JavaDOC

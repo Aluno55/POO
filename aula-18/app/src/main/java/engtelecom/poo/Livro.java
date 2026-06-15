@@ -4,12 +4,10 @@ import java.util.ArrayList;
 
 public class Livro {
     private String title;
-    private Pessoa autor;
     private ArrayList<Capitulo> caps;
 
-    public Livro(String title, Pessoa autor) {
+    public Livro(String title) {
         this.title = title;
-        this.autor = autor;
         caps = new ArrayList<>();
     }
 
