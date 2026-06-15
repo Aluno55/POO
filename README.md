@@ -13,7 +13,7 @@ gradle -q run < asterisco.txt
 
 ## Aulas
 - Aula 01 - Introdução à linguagem Java
-- [Aula 04](./aula-04/) - Iniciando Java
+- Aula 04 - Iniciando Java
 <!-- Lembrete:
 mkdir aula-N
 cd aula-N
@@ -23,7 +23,7 @@ git config --global user.email "email"
 git clone https://github.com/Aluno55/POO.git
 code .
 -->
-- [Aula 05](./aula-05/) - Primeiro uso do Intellij
+- Aula 05 - Primeiro uso do Intellij
 - [Aula 06](./aula-06/) - Argumentos & Começo do Lab-02
 - Aula 07 - Continuação do Lab-02 e como ler arquivos (verificar lab-02)
 - Aula 08 - Paradigma orientado a objetos
