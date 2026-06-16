@@ -8,7 +8,6 @@ public abstract class Cronometro extends Relogio {
     }
 
     public void cronometrar (boolean diminuir) throws InterruptedException, FontFormatException, IOException{
-        int a = 1;
         if (diminuir){
             segundo--;
             if (segundo <= 0 && minuto !=0){

@@ -20,7 +20,7 @@ public class Telefone {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return "";
+        return resultado;
     }
 
     public boolean add (String valor, String rotulo){
