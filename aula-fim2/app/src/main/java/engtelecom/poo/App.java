@@ -15,28 +15,16 @@ public class App {
         // }
 
         String currentDir = System.getProperty("user.dir");
-
         Path dir = Path.of(currentDir);
-
-        // Path dir = Path.of(currentDir+"/arquivo.txt");
-        // if (Files.exists(dir)) {
-        //     IO.println(String.format("Arquivo: " + dir.toAbsolutePath()));
-        //     IO.println(String.format("Regular: " + Files.isRegularFile(dir)));
-        //     IO.println(String.format("Diretório: " + Files.isDirectory(dir)));
-        //     IO.println(String.format("Permissão de Leitura: " + Files.isReadable(dir)));
-        //     IO.println(String.format("Permissão de Escrita: " + Files.isWritable(dir)));
-        // } else {
-        //     IO.println("Arquivo não encontrado");
-        //     IO.println(currentDir);
-        // }
-
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)){
-            for (Path path : stream) {
-                IO.println(path.getFileName());
-            }
-        } catch (IOException e){
-            System.err.println("Erro: " + e);
-        }
+/*
+ls = listar conteudo
+stat <arq> = imprime propriedades do arq
+touch <arq> = cria 1 arq texto
+rm <arq> = exclui arq
+mv <arq><arq2> = move arq para arq2
+*/
+    }
+}
 
 /*
 arquivo regulares: arquivos contendo imagens, texto, etc.
@@ -52,5 +40,3 @@ the "resources" directory is used to save resources, like audios, images and the
 
 Path path = Path.of("src/main/resources/coisas"); // InputStream is = App.class.getClassLoader().getResourceAsStream();
 */
-    }
-}
