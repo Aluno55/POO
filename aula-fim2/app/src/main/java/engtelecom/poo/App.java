@@ -1,16 +1,41 @@
 package engtelecom.poo;
-
-import java.util.Scanner;
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class App {
     public static void main(String[] args) {
+        // try(Scanner arq = new Scanner(App.class.getClassLoader().getResourceAsStream("texto.txt"))){
+        //     while (arq.hasNext()){
+        //         IO.println(arq.nextLine());
+        //     }
+        // } catch (Exception e){
+        //     System.err.println("Erro: " + e);
+        // }
 
-        try(Scanner arq = new Scanner(App.class.getClassLoader().getResourceAsStream("texto.txt"))){
-            while (arq.hasNext()){
-                IO.println(arq.nextLine());
+        String currentDir = System.getProperty("user.dir");
+
+        Path dir = Path.of(currentDir);
+
+        // Path dir = Path.of(currentDir+"/arquivo.txt");
+        // if (Files.exists(dir)) {
+        //     IO.println(String.format("Arquivo: " + dir.toAbsolutePath()));
+        //     IO.println(String.format("Regular: " + Files.isRegularFile(dir)));
+        //     IO.println(String.format("Diretório: " + Files.isDirectory(dir)));
+        //     IO.println(String.format("Permissão de Leitura: " + Files.isReadable(dir)));
+        //     IO.println(String.format("Permissão de Escrita: " + Files.isWritable(dir)));
+        // } else {
+        //     IO.println("Arquivo não encontrado");
+        //     IO.println(currentDir);
+        // }
+
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir)){
+            for (Path path : stream) {
+                IO.println(path.getFileName());
             }
-        } catch (Exception e){
-            System.err.println("Erro: " + e.toString());
+        } catch (IOException e){
+            System.err.println("Erro: " + e);
         }
 
 /*
