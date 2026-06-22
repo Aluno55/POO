@@ -1,28 +1,15 @@
 package engtelecom.poo;
-import java.io.IOException;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class App {
-    public static void main(String[] args) {
-        // try(Scanner arq = new Scanner(App.class.getClassLoader().getResourceAsStream("texto.txt"))){
-        //     while (arq.hasNext()){
-        //         IO.println(arq.nextLine());
-        //     }
-        // } catch (Exception e){
-        //     System.err.println("Erro: " + e);
-        // }
-
+    public static void aplicativo(){
+        IO.readln("ls: lista o conteúdo no diretório atual\nstat <Arquivo>: imprime propriedades do arquivo\n"+
+        "touch <Arquivo>: cria um arquivo texto\nrm <Arquivo>: exclui o arquivo indicado\nmv <Arquivo1> <Arquivo 2>: move o arquivo1 para o arquivo2");
         String currentDir = System.getProperty("user.dir");
         Path dir = Path.of(currentDir);
-/*
-ls = listar conteudo
-stat <arq> = imprime propriedades do arq
-touch <arq> = cria 1 arq texto
-rm <arq> = exclui arq
-mv <arq><arq2> = move arq para arq2
-*/
+    }
+    public static void main(String[] args) {
+        App app = new App();
     }
 }
 
