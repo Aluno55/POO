@@ -10,6 +10,9 @@ gradle init --package=engtelecom.poo
 gradle -q run < asterisco.txt
 -->
 - [Laboratório 03](./lab-03/) - Lista de Exercicios para Objetos
+- [Laboratório 04](./lab-04/) - Diagrama de Classes
+- [Laboratório 05](./lab-05/) - Relógio: Display de 7 Segmentos
+- [Laboratório 06](./lab-06/) - 3 Relógios
 
 ## Aulas
 - Aula 01 - Introdução à linguagem Java
@@ -42,4 +45,17 @@ Objeto é semelhante a DNA? Dita como é (atributos, caracteristicas), o que faz
 - [Aula 16 & 17](./aula-16/) - Collections & Streams
 - [Aula 18 ~ 20](./aula-18/) - Mermaid
 - Aula 22 ~ 24 - Herança & Enumeração
-- Aula Final - Teste de Unidade, JavaDOC
+- AntePenultima Aula - Teste de Unidade, JavaDOC
+- Penultima Aula - Manipulação de Arquivos
+<!-- arquivo regulares: arquivos contendo imagens, texto, etc.
+arquivo diretório: arquivos contendo outros arquivos. Uma "pasta"
+
+caminho absoluto: ex. home/aula/POO/aula-fim2/app/src/main/java/engtelecom/poo/App.java
+caminho relativo: ex. ../poo/App.java ou app\App.java
+
+arquivo binário: eficiente armazenamento, imagem, áudio, vídeo, etc.
+arquivo texto: usa caracteres, texto, csv, markdown, etc.
+
+the "resources" directory is used to save resources, like audios, images and the such.
+
+Path path = Path.of("src/main/resources/coisas"); // InputStream is = App.class.getClassLoader().getResourceAsStream(); -->
